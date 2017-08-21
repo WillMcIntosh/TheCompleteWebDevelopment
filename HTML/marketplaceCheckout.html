@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>marketplace checkout</title>
+  </head>
+
+  <body>
+    <form>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" placeholder="Address" size="30px" maxlength="100">
+        <br />
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" id="postcode" placeholder="Postcode" size="30px" maxlength="25">
+        <br />
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" placeholder="City" size="30px" maxlength="100">
+        <p> Choose your shipping method:</p>
+        <select name="shipping" id="shipping">
+            <option value="freeShipping">Free Super Saver Shipping</option>
+            <option value="twoDay">Two-Day Shipping</option>
+            <option value="oneDay">One-Day Shipping</option>
+        </select>
+        <p>Choose your payment method:</p>
+        <label>
+            <input type="radio" name="payment" value="paypal">
+            PayPal
+        </label>
+            <br>
+            <label>
+                <input type="radio" name="payment" value="debit">
+                Debit Card
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="payment" value="credit">
+                Credit Card
+            </label>
+            <br>
+            <br>
+            <label for="comments">Comments:</label>
+            <br>
+            <textarea name="commets" id="comments" rows="4" cols="40"></textarea>
+            <br>
+            <label>
+                <input type="checkbox" name="emailUpdates" checked="checked">
+                Sign me up for email updates.
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" name="paymentDetails" />
+                Securely save my payment details.
+            </label>
+        </label>
+        <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+
+
+</html>
