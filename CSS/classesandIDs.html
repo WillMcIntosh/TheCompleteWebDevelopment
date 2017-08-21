@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>inline CSS</title>
+    <style>
+    /*use # for IDs from HTML. only one element per ID*/
+        #decide{
+            color:green;
+            font-size: 300%;
+        }
+    /*use . followed by class name for classes*/
+    .blue {
+        color:blue;
+    }
+/*specificity or class vs id priority https://stackoverflow.com/questions/35657410/how-do-i-give-a-css-class-priority-over-an-id*/
+
+/* element = 1 pt
+class = 10 pt
+id = 100 pt
+inline = 1000 pt
+!important = 10,000 pt */
+
+/*https://css-tricks.com/specifics-on-css-specificity/*/
+
+
+    </style>
+  </head>
+
+  <body>
+    <p id="decide">
+        Deciding what not to do is as important as deciding what to do.
+    </p>
+    <p class="blue">
+        Second paragraph.
+    </p>
+    <p class="blue">
+        Third paragraph.
+    </p>
+  </body>
+
+
+</html>
