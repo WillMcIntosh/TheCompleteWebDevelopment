@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>box model padding</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height:auto;
+        width: auto;
+	padding: 16px;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height:auto;
+        width:auto;
+/* top, right, bottom, left */
+	padding: 10px 5px 7px 3em;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height:auto;
+        width: auto;
+/* top+bottom, right+left */
+	padding: 40px 10px;
+    }
+    p {
+	margin:0;
+    }
+    </style>
+  </head>
+<!-- div or division is an HTML section which groups block elements -->
+
+  <body>
+      <div class="bluebox">
+          <p>
+              Facebook is great. 
+          </p>
+      </div>
+      <div class="yellowbox">
+          <p>
+              Microsoft
+          </p>
+      </div>
+      <div class="greenbox">
+          <p>
+              Apple
+          </p>
+
+      </div>
+
+  </body>
+
+
+</html>

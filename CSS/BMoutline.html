@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Box Model Outline</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height:auto;
+        width: auto;
+	padding: 16px;
+	border: 10px #e8c14e ridge;
+	outline-style: solid;
+	outline-color: #bc8df5;
+	outline-width: thick;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height:auto;
+        width:auto;
+	/* top, right, bottom, left */
+	padding: 10px 5px 7px 3em;
+	border-width: 10px 15px 5px 10px;
+	border-color: black green orange yellow;
+	border-style: ridge;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height:auto;
+        width: auto;
+	/* top+bottom, right+left */
+	padding: 40px 10px;
+	border-width: 10px 20px;
+	border-style: groove;
+	border-color: #8bbbbf;
+	border-radius: 10px;
+	/* for a circle, increase border-radius and make padding and border-width one size */
+    }
+    p {
+	margin:0;
+	background-color: grey;
+    }
+    </style>
+  </head>
+<!-- div or division is an HTML section which groups block elements -->
+
+  <body>
+      <div class="bluebox">
+          <p>
+              Facebook is great. 
+          </p>
+      </div>
+      <div class="yellowbox">
+          <p>
+              Microsoft
+          </p>
+      </div>
+      <div class="greenbox">
+          <p>
+              Apple
+          </p>
+
+      </div>
+
+  </body>
+
+
+</html>
