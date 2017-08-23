@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>text effects</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: auto;
+        overflow: hidden;
+        white-space: nowrap;
+            /*
+             * text overflow needs overflow: hidden and white-space: nowrap to work
+             * it also only works on block or inline-block level elements (not <p>'s)
+             */
+        text-overflow: ellipsis;
+    }
+    .bluebox:hover{
+        overflow: visible;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width: 400px;
+        /* word-break: break-all; */
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+    </style>
+  </head>
+<!-- div or division is an HTML section which groups block elements -->
+
+  <body>
+      <div class="bluebox">
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+          Facebook Facebook Facebook Facebook Facebook Facebook Facebook 
+
+      </div>
+      <div class="yellowbox">
+          <p>
+          Apple Apple  loooooooooooooooooooooooooongApple  Apple  Apple  Apple  Apple  Apple  Apple 
+          Apple Apple  Apple  Apple  Apple  Apple  Apple  Apple  Apple 
+          Apple Apple  Apple  Apple  Apple  Apple  Aloooooooooooooooooooooooooongpple  Apple  Apple 
+          Apple Apple  Apple  Apple  Apple  Apple  Apple  Apple  Apple 
+          Apple Apple  Apple  Apple  Apple  Apple  Apple  Apple  Apple 
+          Apple Apple  Apple  Apple  Apple  Apple  Apple  Apple  Apple 
+          </p>
+      </div>
+      <div class="greenbox">
+          <p>
+              Microsoft
+          </p>
+
+      </div>
+
+  </body>
+
+
+</html>
