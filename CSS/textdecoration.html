@@ -3,43 +3,38 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Borders</title>
+    <title>text decorations</title>
     <style>
     .bluebox{
         /*background color from colorzilla extension*/
         background-color: #3B5998;
         color: white;
-        height:auto;
+        height: 100px;
         width: auto;
-	padding: 16px;
-	border: 10px #e8c14e ridge;
+        text-decoration: underline;
+        font-weight: bold;
     }
     .yellowbox{
         background-color: #a1a246;
-        height:auto;
+        height: 100px;
         width:auto;
-	/* top, right, bottom, left */
-	padding: 10px 5px 7px 3em;
-	border-width: 10px 15px 5px 10px;
-	border-color: black green orange yellow;
-	border-style: ridge;
+        text-decoration: overline;
+        font-style: italic;
+        /* 1 em is 16 px */
+        font-size: 1.5em;
     }
     .greenbox{
         /*background colour from kcolorchooser*/
         background-color: #11a911;
-        height:auto;
+        height: 100px;
         width: auto;
-	/* top+bottom, right+left */
-	padding: 40px 10px;
-	border-width: 10px 20px;
-	border-style: groove;
-	border-color: #8bbbbf;
-	border-radius: 10px;
-	/* for a circle, increase border-radius and make padding and border-width one size */
+        letter-spacing: 10px;
+        /* horizontal shadow, vertical shadow, (optional) blur radius, colour */
+        text-shadow: 3px 3px 3px blue;
+        text-indent: 40px;
     }
-    p {
-	margin:0;
-	background-color: grey;
+    .great{
+        color: #a352ff;
     }
     </style>
   </head>
@@ -48,17 +43,17 @@
   <body>
       <div class="bluebox">
           <p>
-              Facebook is great. 
+              Facebook is <span class="great">great.</span>
           </p>
       </div>
       <div class="yellowbox">
           <p>
-              Microsoft
+              Apple
           </p>
       </div>
       <div class="greenbox">
           <p>
-              Apple
+              Microsoft
           </p>
 
       </div>

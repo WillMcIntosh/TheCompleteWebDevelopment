@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>div and span</title>
+    <title>text align</title>
     <style>
     .bluebox{
         /*background color from colorzilla extension*/
@@ -11,17 +11,28 @@
         color: white;
         height: 100px;
         width: auto;
+        text-decoration: underline;
+        font-weight: bold;
+        text-align: center;
     }
     .yellowbox{
         background-color: #a1a246;
         height: 100px;
         width:auto;
+        text-decoration: overline;
+        font-style: italic;
+        /* 1 em is 16 px */
+        font-size: 1.5em;
     }
     .greenbox{
         /*background colour from kcolorchooser*/
         background-color: #11a911;
         height: 100px;
         width: auto;
+        letter-spacing: 10px;
+        /* horizontal shadow, vertical shadow, (optional) blur radius, colour */
+        text-shadow: 3px 3px 3px blue;
+        text-indent: 40px;
     }
     .great{
         color: #a352ff;
@@ -33,8 +44,18 @@
   <body>
       <div class="bluebox">
           <p>
-<!-- span elements are in line and used for small chunks of html code -->
-              Facebook is <span class="great">great.</span>
+          Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+Facebook Facebook Facebook Facebook Facebook Facebook 
+
+
+
+
+
           </p>
       </div>
       <div class="yellowbox">
