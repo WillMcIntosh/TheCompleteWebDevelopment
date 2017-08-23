@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>div and span</title>
+    <title>display</title>
     <style>
     .bluebox{
         /*background color from colorzilla extension*/
@@ -11,6 +11,10 @@
         color: white;
         height: 100px;
         width: auto;
+        /* hide element but preserve space */
+        /* visibility: hidden; */
+        /* hide element and take up no space */
+        /* display: none; */
     }
     .yellowbox{
         background-color: #a1a246;
@@ -25,6 +29,12 @@
     }
     .great{
         color: #a352ff;
+            /*
+             * displayed as a block element, but still an inline element. 
+             * this means it is not allowed to have other block elements inside ?
+             * can do the same for blocks to display them as inline
+             */
+        display: block;
     }
     </style>
   </head>

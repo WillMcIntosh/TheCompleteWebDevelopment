@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>div and span</title>
+    <style>
+        .bluebox{
+            /*background color from colorzilla extension*/
+            background-color: #3B5998;
+            color: white;
+            height: 100px;
+            width: auto;
+            /* all other elements will ignore the bluebox facebook */
+            position: fixed;
+            /* 30 px away from top and left of page */
+            top: 30px;
+            left: 30px;
+            z-index: 1;
+        }       
+        .yellowbox{
+            background-color: #a1a246;
+            height: 100px;
+            width:auto;
+            /* positioned 20 px lower and to the right of original position */
+            /* all other elements are behaving as if Apple was still in its original positon */
+            position: relative;
+            top: 20px;
+            left: 20px;
+            /* element with highest z-index goes on top. if an element is not given a z */
+            /* index, it will inherit from its parent. the html element z-index default is 0 */
+            /* additionally, if an element has a position and all others do not, it will be on top */
+            /* if all elements are positioned and there is no z index, the last one in the code will */
+            /* be on top. */
+            z-index: 2;
+        }
+        .greenbox{
+            /*background colour from kcolorchooser*/
+            background-color: #11a911;
+            height: 100px;
+            width: auto;
+            /* positioning relative to the first parent that is not static */
+            /* if there is no such parent, position relative to the HTML element */
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .great{
+            color: #a352ff;
+        }
+    </style>
+  </head>
+<!-- div or division is an HTML section which groups block elements -->
+
+  <body>
+      <div class="bluebox">
+          <p>
+              Facebook is <span class="great">great.</span>
+          </p>
+      </div>
+      <div class="yellowbox">
+          <p>
+              Apple
+          </p>
+      </div>
+      <div class="greenbox">
+          <p>
+            Microsoft
+          </p>
+
+      </div>
+
+  </body>
+
+
+</html>
+
