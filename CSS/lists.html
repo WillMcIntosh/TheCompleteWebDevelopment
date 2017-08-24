@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lists</title>
+    <style>
+        ul.list1 {
+            /* list-style: square; */
+            /* list-style: upper-roman; */
+            margin-left: 20px;
+            list-style-image: url(/home/will/Classes/Udemy_webdev/HTML/images/picture3.png);
+        }
+        ul.list2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.list2 li {
+            background-image: url(/home/will/Classes/Udemy_webdev/HTML/images/picture.png);
+            background-repeat: no-repeat;
+            padding-left: 30px;
+            background-position: 0px center;
+
+        }
+/* info on list-style-image: size https://stackoverflow.com/questions/7775594/css-list-style-image-size */
+    
+    </style>
+</head>
+<body>
+    <p>list of European capitals:</p>
+    <ul class="list1">
+        <li>Paris</li>
+        <li>London</li>
+        <li>Madrid</li>
+    </ul>
+    <ul class="list2">
+       <li>Paris</li>
+       <li>London</li>
+       <li>Madrid</li>
+    </ul>
+   
+</body>
+</html>
