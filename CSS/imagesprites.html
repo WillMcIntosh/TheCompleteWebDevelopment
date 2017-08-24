@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image sprites</title>
+    <style>
+        #image1 {
+            height: 100px;
+            width: 100px;
+            /*
+             * image size is 480 by 360. Coordinates of 480px 360 px 
+             * Correspond to the top left corner of the pic.
+             * Using the negative coordinates found using imagemagick will
+             * start the image in the right place.
+             */
+            background: url(/home/will/Classes/Udemy_webdev/HTML/images/picture.png) -186px -90px;
+
+
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <img id="image1">
+    
+</body>
+</html>
