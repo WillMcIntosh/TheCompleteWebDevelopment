@@ -1,5 +1,5 @@
 #container {
-    width: 1500px;
+    width: 1050px;
     border: 1px solid grey;
     margin: 0 auto;
 }
@@ -14,9 +14,12 @@ h1 a {
 /* entire searchbox div floating right with a green background */
 #searchbox {
     float: right;
-    background: linear-gradient(#DEF1AC, #BAE95B);
+    background: linear-gradient(#E4F2B9, #BAE95B);
     width: 400px;
     height: 50px;
+    padding: 20px 20px 0px 20px;
+    /* add space between search box and border of the header */
+    margin-top: 20px;
 
 }
 
@@ -27,6 +30,12 @@ h1 a {
     padding: 5px;
     font-size: 15px;
     color: #E36A0C;
+    /*
+     * image created using logomakr.com 
+     * http://www.flaticon.com/authors/freepik
+     */
+    background: white url(images/search.png) right center no-repeat;
+
 }
 
 /* submit class for submit button of search box */
@@ -39,6 +48,9 @@ h1 a {
     background: #A751D6;
     font-size: 15px;
 }
+.clear {
+   clear: both;
+}
 
 /*
  * Container div collapsed because header div collapsed.
@@ -48,6 +60,7 @@ h1 a {
  */
 #header {
     height: 100px;
+    padding: 10px 0;
 }
 
 #brand {
