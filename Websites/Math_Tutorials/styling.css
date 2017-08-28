@@ -23,11 +23,21 @@ h1 a {
 /* text class for input of search box. */
 .text {
     float:left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: #E36A0C;
 }
 
 /* submit class for submit button of search box */
 .submit {
     float: right;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    /* background-color property cannot be used for buttons */
+    background: #A751D6;
+    font-size: 15px;
 }
 
 /*
