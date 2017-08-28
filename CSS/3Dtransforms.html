@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>2D trasnforms</title>
+    <title>3D transforms</title>
     <style>
     .bluebox{
         /*background color from colorzilla extension*/
@@ -11,26 +11,16 @@
         color: white;
         height: 100px;
         width: 100px;
-        /* standard syntax */
-        transform: rotate(30deg);
-        /* internet explorer 9 */
-        -ms-transform: rotate(30deg);
-        /* safari */
-        -webkit-transform: rotate(30deg);
-        /* first value is right (+) left (-), second is up down */
-        /* transform: translate(20px,30px); */
-        /* width, height */
-        /* transform: scale(0.5,0.75); */
+        /* rotate a div around the x axis. a 90 degree will show nothing since div is flat */
+        /* transform: rotateX(30deg); */
+        /* rotate around Y axis. standard syntax. */
+        transform: rotateY(30deg);
+        /* for IE9 -ms-transform: , for others -webkit-transform: */
     }
     .yellowbox{
         background-color: #a1a246;
         height: 100px;
         width:auto;
-        transform: skewX(10deg);
-        /*
-         * or x,y
-         * transform: skew(10deg, 20deg);
-         */
     }
     .greenbox{
         /*background colour from kcolorchooser*/
