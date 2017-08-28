@@ -1,6 +1,46 @@
 #container {
     width: 1500px;
     border: 1px solid grey;
-    height: 100px;
     margin: 0 auto;
 }
+
+h1 a {
+    font-size: 50px;
+    font-weight: 100;
+    color:#861BBF;
+    text-decoration: none;
+}
+
+/* entire searchbox div floating right with a green background */
+#searchbox {
+    float: right;
+    background: linear-gradient(#DEF1AC, #BAE95B);
+    width: 400px;
+    height: 50px;
+
+}
+
+/* text class for input of search box. */
+.text {
+    float:left;
+}
+
+/* submit class for submit button of search box */
+.submit {
+    float: right;
+}
+
+/*
+ * Container div collapsed because header div collapsed.
+ * All items inside the header div were floating elements, and
+ * html elements that consist of only floating elements behave as if they 
+ * don't have any elements in them at all. 
+ */
+#header {
+    height: 100px;
+}
+
+#brand {
+    float:left;
+}
+
