@@ -85,6 +85,11 @@ ul {
     padding: 0 30px;
     height: 30px;
     border-right: 1px solid #5d12e7;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
 }
 
 #menu ul li:last-child {
