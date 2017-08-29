@@ -111,3 +111,42 @@ ul {
     color:#C765AD;
 }
 
+#introduction {
+    background: linear-gradient(#E4F1B8,#B8E954);
+    padding: 30px;
+    margin: 16px 0;
+}
+
+#introduction h3 {
+    font-size: 45px;
+    color: #316901;
+    font-weight: normal;
+}
+
+#introduction p {
+    font-size: 25px;
+    color: #316901;
+    text-align: justify;
+}
+
+.sidebar {
+    height: 500px;
+    width: 450px;
+    border: 1px solid #BAF46F;
+    border-radius: 20px;
+    /* add padding to sidebar so we can have a gap before header */
+    padding: 10px 30px;
+
+}
+
+.sidebar h3 {
+    color: #C346E2;
+}
+
+#leftsidebar {
+    float: left;
+}
+
+#rightsidebar {
+    float: right;
+}
