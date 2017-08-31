@@ -1,3 +1,9 @@
+
+body {
+    font: Arial, Helvetica, sans-serif;
+}
+
+
 #container {
     width: 1050px;
     /* border: 1px solid grey; */
@@ -31,6 +37,9 @@ h1 a {
 #searchbox {
     float: right;
     background: linear-gradient(#E4F2B9, #BAE95B);
+    background: -webkit-linear-gradient(#E4F2B9, #BAE95B);
+    background: -o-linear-gradient(#E4F2B9, #BAE95B);
+    background: -moz-linear-gradient(#E4F2B9, #BAE95B);
     width: 400px;
     height: 50px;
     padding: 20px 20px 0px 20px;
@@ -49,8 +58,11 @@ h1 a {
     /*
      * image created using logomakr.com 
      * http://www.flaticon.com/authors/freepik
+     * resized using imagemagick command: convert -resize "25>" image.png image1.png
      */
     background: white url(images/search.png) right center no-repeat;
+    /* get rid of default dark border */
+    border: 1px solid #C8D03E;
 
 }
 
@@ -70,11 +82,14 @@ h1 a {
 #menu {
     height: 70px;
     background: linear-gradient( #F7F490 ,#D6D636);
+    background: -webkit-linear-gradient( #F7F490 ,#D6D636);
+    background: -o-linear-gradient( #F7F490 ,#D6D636);
+    background: -moz-linear-gradient( #F7F490 ,#D6D636);
     /* to add padding between list items and menu div */
     padding: 7px 0;
     
 }
-
+/* all lists inside the document will be styled with this tag */
 ul {
     list-style: none;
 }
@@ -102,7 +117,6 @@ ul {
     color: #5d12e7;
     /* to center the text in the divider bars, line height */
     line-height: 30px;
-    
 }
 
 #menu ul li a:hover, #menu ul li a.active{
@@ -113,6 +127,9 @@ ul {
 
 #introduction {
     background: linear-gradient(#E4F1B8,#B8E954);
+    background: -webkit-linear-gradient(#E4F1B8,#B8E954);
+    background: -o-linear-gradient(#E4F1B8,#B8E954);
+    background: -moz-linear-gradient(#E4F1B8,#B8E954);
     padding: 30px;
     margin: 16px 0;
 }
@@ -130,7 +147,7 @@ ul {
 }
 
 .sidebar {
-    height: 500px;
+    height: 520px;
     width: 450px;
     border: 1px solid #BAF46F;
     border-radius: 20px;
@@ -141,12 +158,67 @@ ul {
 
 .sidebar h3 {
     color: #C346E2;
+    font-size: 30px;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    text-decoration: none;
+    color:#C765AD;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 #leftsidebar {
     float: left;
 }
 
+.sidebar ul {
+    padding-top: 3px;
+}
+
+#leftsidebar ul li {
+    /* create space between list items for the left list */
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-top: 4px;
+    /* another image from logomakr */
+    list-style-image: url(images/arrow.png);
+}
+
 #rightsidebar {
     float: right;
+}
+
+#rightsidebar ul li {
+    padding-bottom: 13px;
+    padding-top: 13px;
+    padding-left: 50px;
+    /*
+     * another way of doing a list with images for tick marks
+     * image from logomakr as well
+     * padding top and bottom actually center the text with the pic
+     */
+    background: url(images/tick.png) no-repeat left center;
+}
+
+.footer {
+    height: 60px;
+    background: linear-gradient(#F2EF86, #D7D73A);
+    background: -webkit-linear-gradient(#F2EF86, #D7D73A);
+    background: -o-linear-gradient(#F2EF86, #D7D73A);
+    background: -moz-linear-gradient(#F2EF86, #D7D73A);
+    padding: 10px 30px;
+    /* add a gap between footer and other elements */
+    margin-top: 15px;
 }
