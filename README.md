@@ -1,4 +1,4 @@
-# Udemy Web dev course
+# Web Development Course by Development Island
 
 Following along with "The Complete Web Development Course" by Development Island on Udemy, I will save each exercise or section as a different file in the appropriate folder.
 
