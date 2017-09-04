@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons using JavaScript</title>
+</head>
+<body>
+    <p>Javascript.</p>
+
+    <!-- one way of using JS in the onclick attribute of a button -->
+    <button onclick="alert('Hello, how can I help you?')">Click me.</button>
+
+    <!-- another way is by writing the JS in a script tag and referring to it -->
+    <button id="button2">Or click me.</button>
+    
+    <script>
+        // need an event listener such as onclick onmouseover followed by a function
+        document.getElementById("button2").onclick=function(){
+            alert("You have just clicked button 2");
+        }
+
+
+  
+  </script>
+</body>
+</html>
