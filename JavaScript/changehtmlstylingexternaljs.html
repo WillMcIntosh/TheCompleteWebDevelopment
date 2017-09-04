@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change HTML styling using JavaScript</title>
+    
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: auto;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width:auto;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+    </style>
+  </head>
+
+  <body>
+      <div class="bluebox" id="facebook">
+          <p>
+              Facebook is <span class="great">great.</span>
+          </p>
+      </div>
+      <div class="yellowbox" id="apple">
+          <p>
+              Apple
+          </p>
+      </div>
+      <div class="greenbox" id="microsoft">
+          <p>
+              Microsoft
+          </p>
+
+      </div>
+      <button id="button1">change facebook style</button>
+      <button id="button2">change apple style</button>
+    <!-- <script> -->
+        
+        <!--
+          apparently having onClick instead of onclick caused this to not work
+          onClick doesn't work because JS is case sensitive.
+        -->
+       
+
+<!--
+  document.getElementById("button1").onclick =
+      function(){
+          document.getElementById("facebook").style.width = '20px';
+      }
+-->
+      
+<!-- </script> -->
+
+<!--
+external js worked fine but the script tag needed to be here
+instead of in the head so that the function is executed 
+after the relevant DOM (Document Object Model) items have been parsed. 
+-->
+    <script type="text/javascript" src="js/changehtmlstyling.js"></script>
+  </body>
+
+
+</html>
