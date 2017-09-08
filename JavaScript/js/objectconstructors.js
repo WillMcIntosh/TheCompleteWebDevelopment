@@ -2,8 +2,17 @@
 
 // window.alert("hello this works")
 
-// this is a constructor
-function phone(make, model, warranty, color){
+/*
+ * Constructors are useful for creating multiple objects with the 
+ * same properties and methods.
+ */
+
+/*
+ * this is a constructor. It's convention to capitalise the
+ * name of constructors to distinguish them from regular functions
+ */
+
+function Phone(make, model, warranty, color){
     // JavaScript this refers to the object in question
     // can define properties inside of the function with this. 
     this.make = make;
