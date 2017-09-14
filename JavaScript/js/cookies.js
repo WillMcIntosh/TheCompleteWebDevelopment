@@ -1,3 +1,5 @@
+//cookies do not store for local files on chromium, I had to use firefox
+
 // #<{(|
 //  * cookies are pieces of info stored to the user's comp in a text file
 //  * which help the web page remember things about the user for when 
