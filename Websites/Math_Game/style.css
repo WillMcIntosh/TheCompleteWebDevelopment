@@ -62,6 +62,7 @@ html {
     -webkit-box-shadow: 0px 4px #535AA8;
     font-size: 100px;
     /* text will appear at top, use line-height to adjust if needed */
+    line-height: 150px;
     text-align: center;
     font-family: cursive , sans-serif;
     color: black;
