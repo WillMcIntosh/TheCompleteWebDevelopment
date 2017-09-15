@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+#container {
+    height: 400px;
+    width: 550px;
+    background-color: #9DD2EA;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color] */
+    box-shadow: 0px 4px 0px 0px #009de4;
+    /*
+     * in order to position the boxes inside relative to the container, it needs a relative position
+     * if not, the positioning of the other elements would be relative to the body element because
+     * it is the first parent with a relaive position
+     */
+    position: relative;
+}
+
+#score {
+    background-color: #F1FF92;
+    color: #888E5F;
+    padding: 11px;
+    position: absolute;
+    left: 500px;
+    box-shadow: 0px 4px #9DA853;
+
+}
+
+#correct {
+    position: absolute;
+    left: 260px;
+    background-color: #42E252;
+    color: #FFFFFF;
+    padding: 11px;    
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    left: 260px;
+    background-color: #DE401A;
+    color: #FFFFFF;
+    padding: 11px;    
+    display: none;
+}
+
+#question {
+    width: 450px;
+    height: 150px;
+    margin: 50px auto 10px auto;
+    background-color: #9DA0EA;
+    box-shadow: 0px 4px #535AA8;
+    font-size: 100px;
+    /* text will appear at top, use line-height to adjust if needed */
+    text-align: center;
+    font-family: cursive , sans-serif;
+    color: black;
+}
