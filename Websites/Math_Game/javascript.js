@@ -1,51 +1,77 @@
-// if we click on the start/reset button
-//      if we are playing
-//          reload page
-//      if we are not playing
-//          set score to 0
-//          show countdown box
-//          start reducing time by 1s in loops
-//          if there is time left
-//              yes--> continue
-//              no--> game over
-//          change button to reset
-//          generate a new question and multiple answers
+/*
+ * Game Logic from class: 
+ * if we click on the start/reset button
+ *      if we are playing
+ *          reload page
+ *      if we are not playing
+ *          set score to 0
+ *          show countdown box
+ *          start reducing time by 1s in loops
+ *          if there is time left
+ *              yes--> continue
+ *              no--> game over
+ *          change button to reset
+ *          generate a new question and multiple answers
+ * 
+ * if we click on an answer box
+ *      if we are playing
+ *          correct?
+ *              yes--> 
+ *                  increase score by one
+ *                  show correct box for 1s
+ *                  generate new Q&A
+ *              no--> 
+ *                  show try again for one sec
+ */
 
-// if we click on an answer box
-//      if we are playing
-//          correct?
-//              yes--> 
-//                  increase score by one
-//                  show correct box for 1s
-//                  generate new Q&A
-//              no--> 
-//                  show try again for one sec
 var gameCounter;
 var gameTimeLeft;
-var score = 0;
+var score;
 var gameOn = false;
+
 function startReset(){
+// if we click on the start/reset button
+// if we are playing
     if (gameOn == true){
+// reload page
         window.location.reload(false);
+// if we are not playing
     }else{
+// set score to 0
         score = 0;
         document.getElementById("scoreValue").innerHTML = score;
         document.getElementById("instruction").innerHTML = "Click on the correct answer.";
-        document.getElementById("timeRemaining").style.display = 'block'; 
-        document.getElementById("gameOver").style.display = 'none';
+// show countdown box
+        show("timeRemaining");
+// make sure gameOver message is not showing
+        hide("gameOver");
         document.getElementById("startReset").innerHTML = "Reset";
+// start reducing time by 1s in loops
         var countLeft = 60;
         gameCounter = setInterval(function(){countLeft--; timeRemainingValue.innerHTML = countLeft;},1000);
+// if there is time left
+// yes--> continue
+// no--> game over (call gameOver function after 60 sec)
         gameTimeLeft = setTimeout(gameOver, 60000);
+// set gameOn to true for use in other functions
         gameOn = true;
+// generate a new question and multiple answers
         generateQA();
     }
 }
 
+// functions to show and hide elements
+function hide(elementId){
+    document.getElementById(elementId).style.display = 'none';
+}
+function show(elementId){
+    document.getElementById(elementId).style.display = 'block';
+}
+
 function gameOver(){
     window.clearInterval(gameCounter);
-    document.getElementById("timeRemaining").style.display = 'none';
-    document.getElementById("gameOver").style.display = 'block';
+    hide("timeRemaining");
+    show("gameOver");
     document.getElementById("scoreNumber").innerHTML = score;
     document.getElementById("startReset").innerHTML = "Start Game";
     gameOn = false;
@@ -67,7 +93,7 @@ function generateQA(){
 // create the random first and second number, and then the correctAnswer 
     var firstNumber = Math.floor(Math.random()*13);
     var secondNumber = Math.floor(Math.random()*13);
-    // assign value to correctAnswer
+// assign value to correctAnswer
     correctAnswer = firstNumber * secondNumber; 
 // find the index of correctAnswer and remove it from the array of possible answers
     var correctAnswerIndex = answers.indexOf(correctAnswer);
@@ -109,19 +135,33 @@ function generateQA(){
 }
 
 function answerBoxClick(boxNum){
+// if we click on an answer box
     var correctMessage = document.getElementById("correct");
     var incorrectMessage = document.getElementById("wrong");
     var boxAnswer = document.getElementById(boxNum).innerHTML;
+// if we are playing
     if (gameOn == true){
+// correct?
+// yes--> 
         if(document.getElementById(boxNum).innerHTML == correctAnswer){
+// increase score by one
             score++
             document.getElementById("scoreValue").innerHTML = score;
-            correctMessage.style.display = 'block';
-            var correctAway = setTimeout(function(){correctMessage.style.display = 'none'},700);
+// show correct box for 1s
+            show("correct");
+            setTimeout(function(){
+                hide("correct");
+            },700);
+// generate new Q&A
             generateQA();
+// no--> 
         }else {
+// show try again for one sec
             incorrectMessage.style.display = 'block';
-            var incorrectAway = setTimeout(function(){incorrectMessage.style.display = 'none'},700);
+            show("wrong");
+            setTimeout(function(){
+                hide("wrong");
+            },700);
         }
     }
 }

@@ -1,6 +1,9 @@
 html {
     height: 100%;
     background: radial-gradient(circle, #fff, #ccc);
+    background: -webkit-radial-gradient(circle, #fff, #ccc);
+    background: -o-radial-gradient(circle, #fff, #ccc);
+    background: -moz-radial-gradient(circle, #fff, #ccc);
 }
 
 #container {
@@ -27,7 +30,7 @@ html {
     color: #888E5F;
     padding: 11px;
     position: absolute;
-    left: 500px;
+    left: 490px;
     box-shadow: 0px 4px #9DA853;
     -webkit-box-shadow: 0px 4px #9DA853;
     -moz-box-shadow: 0px 4px #9DA853;
@@ -108,15 +111,20 @@ html {
     -ms-transition: all 0.2s;
 }
 
-.box:hover, #startReset:hover {
-    background-color: #9C89F6;
-    color: white;
-    box-shadow: 0px 4px #6B54D3;
-    -moz-box-shadow: 0px 4px #6B54D3;
-    -webkit-box-shadow: 0px 4px #6B54D3;
-}
+/* commented out for touch screens */
+/*
+ * .box:hover, #startReset:hover {
+ *     background-color: #9C89F6;
+ *     color: white;
+ *     box-shadow: 0px 4px #6B54D3;
+ *     -moz-box-shadow: 0px 4px #6B54D3;
+ *     -webkit-box-shadow: 0px 4px #6B54D3;
+ * }
+ */
 
 .box:active, #startReset:active {
+    background-color: #9C89F6;
+    color: white;
     box-shadow: 0px 0px #6B54D3;
     -moz-box-shadow: 0px 0px #6B54D3;
     -webkit-box-shadow: 0px 0px #6B54D3;
@@ -129,7 +137,7 @@ html {
 }
 
 #startReset {
-    width: 78px;
+    width: 100px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     margin: 0 auto;
@@ -149,7 +157,7 @@ html {
 }
 
 #timeRemaining {
-    width: 152px;
+    width: 165px;
     padding: 10px;
     position: absolute;
     top: 395px;
@@ -171,6 +179,9 @@ html {
     height: 200px;
     width: 500px;
     background: linear-gradient(#F3CA6B, #F3706C);
+    background: -webkit-linear-gradient(#F3CA6B, #F3706C);
+    background: -o-linear-gradient(#F3CA6B, #F3706C);
+    background: -moz-linear-gradient(#F3CA6B, #F3706C);
     color: white;
     font-size: 2.5em;
     text-align: center;
