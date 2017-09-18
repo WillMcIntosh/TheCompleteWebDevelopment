@@ -28,8 +28,11 @@ function startReset(){
     if (gameOn == true){
         window.location.reload(false);
     }else{
+        score = 0;
         document.getElementById("scoreValue").innerHTML = score;
+        document.getElementById("instruction").innerHTML = "Click on the correct answer.";
         document.getElementById("timeRemaining").style.display = 'block'; 
+        document.getElementById("gameOver").style.display = 'none';
         document.getElementById("startReset").innerHTML = "Reset";
         var countLeft = 60;
         gameCounter = setInterval(function(){countLeft--; timeRemainingValue.innerHTML = countLeft;},1000);
@@ -105,12 +108,21 @@ function generateQA(){
     document.getElementById("question").innerHTML = firstNumber + 'x' + secondNumber;
 }
 
-/*
- * function answerBoxClick(){
- *     if (gameOn == true){
- * 
- * 
- *     }
- * }
- */
+function answerBoxClick(boxNum){
+    var correctMessage = document.getElementById("correct");
+    var incorrectMessage = document.getElementById("wrong");
+    var boxAnswer = document.getElementById(boxNum).innerHTML;
+    if (gameOn == true){
+        if(document.getElementById(boxNum).innerHTML == correctAnswer){
+            score++
+            document.getElementById("scoreValue").innerHTML = score;
+            correctMessage.style.display = 'block';
+            var correctAway = setTimeout(function(){correctMessage.style.display = 'none'},700);
+            generateQA();
+        }else {
+            incorrectMessage.style.display = 'block';
+            var incorrectAway = setTimeout(function(){incorrectMessage.style.display = 'none'},700);
+        }
+    }
+}
 
