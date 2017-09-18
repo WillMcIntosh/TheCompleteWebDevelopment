@@ -32,7 +32,7 @@ var gameOn = false;
 function startReset(){
 // if we click on the start/reset button
 // if we are playing
-    if (gameOn == true){
+    if (gameOn === true){
 // reload page
         window.location.reload(false);
 // if we are not playing
@@ -98,7 +98,7 @@ function generateQA(){
 // find the index of correctAnswer and remove it from the array of possible answers
     var correctAnswerIndex = answers.indexOf(correctAnswer);
     if (correctAnswerIndex > -1){
-        answers.splice(correctAnswerIndex,1)
+        answers.splice(correctAnswerIndex,1);
     }
 // create an array of answer choices, including the correctAnswer
 // first, use the Fisher-Yates Shuffle algorithm
@@ -128,24 +128,22 @@ function generateQA(){
     }
     shuffle(boxAnswers);
 // shuffling the new boxAnswers array now allows the elements to be added to the boxes
-    for(var i =1; i<5;i++){
-        document.getElementById("box"+i).innerHTML = boxAnswers[i -1];
+    for(var k =1; k<5;k++){
+        document.getElementById("box"+k).innerHTML = boxAnswers[k -1];
     }
     document.getElementById("question").innerHTML = firstNumber + 'x' + secondNumber;
 }
 
 function answerBoxClick(boxNum){
 // if we click on an answer box
-    var correctMessage = document.getElementById("correct");
-    var incorrectMessage = document.getElementById("wrong");
     var boxAnswer = document.getElementById(boxNum).innerHTML;
 // if we are playing
-    if (gameOn == true){
+    if (gameOn === true){
 // correct?
 // yes--> 
         if(document.getElementById(boxNum).innerHTML == correctAnswer){
 // increase score by one
-            score++
+            score++;
             document.getElementById("scoreValue").innerHTML = score;
 // show correct box for 1s
             show("correct");
@@ -157,7 +155,6 @@ function answerBoxClick(boxNum){
 // no--> 
         }else {
 // show try again for one sec
-            incorrectMessage.style.display = 'block';
             show("wrong");
             setTimeout(function(){
                 hide("wrong");
