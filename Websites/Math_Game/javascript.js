@@ -29,7 +29,7 @@ var gameTimeLeft;
 var score;
 var gameOn = false;
 
-function startReset(){
+document.getElementById("startReset").onclick = function() {
     // if we click on the start/reset button
     // if we are playing
     if (gameOn === true){
@@ -58,7 +58,7 @@ function startReset(){
         // generate a new question and multiple answers
         generateQA();
     }
-}
+};
 
 // functions to show and hide elements
 function hide(elementId){
@@ -163,8 +163,6 @@ for(b=1;b<5; b++){
                 },700);
             }
         }
-
-
-    }
+    };
 }
 
