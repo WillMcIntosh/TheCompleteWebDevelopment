@@ -30,32 +30,32 @@ var score;
 var gameOn = false;
 
 function startReset(){
-// if we click on the start/reset button
-// if we are playing
+    // if we click on the start/reset button
+    // if we are playing
     if (gameOn === true){
-// reload page
+        // reload page
         window.location.reload(false);
-// if we are not playing
+    // if we are not playing
     }else{
-// set score to 0
+        // set score to 0
         score = 0;
         document.getElementById("scoreValue").innerHTML = score;
         document.getElementById("instruction").innerHTML = "Click on the correct answer.";
-// show countdown box
+        // show countdown box
         show("timeRemaining");
-// make sure gameOver message is not showing
+        // make sure gameOver message is not showing
         hide("gameOver");
         document.getElementById("startReset").innerHTML = "Reset";
-// start reducing time by 1s in loops
+        // start reducing time by 1s in loops
         var countLeft = 60;
         gameCounter = setInterval(function(){countLeft--; timeRemainingValue.innerHTML = countLeft;},1000);
-// if there is time left
-// yes--> continue
-// no--> game over (call gameOver function after 60 sec)
+        // if there is time left
+        // yes--> continue
+        // no--> game over (call gameOver function after 60 sec)
         gameTimeLeft = setTimeout(gameOver, 60000);
-// set gameOn to true for use in other functions
+        // set gameOn to true for use in other functions
         gameOn = true;
-// generate a new question and multiple answers
+        // generate a new question and multiple answers
         generateQA();
     }
 }
@@ -85,17 +85,17 @@ function generateQA(){
  * add the four box answers to the boxes in random order.
  */
     
-// create an empty array and then populate it with 0 through 144
+    // create an empty array and then populate it with 0 through 144
     var answers = [];
     for (var i =0; i<145; i++){
         answers.push(i);
     }
-// create the random first and second number, and then the correctAnswer 
+    // create the random first and second number, and then the correctAnswer 
     var firstNumber = Math.floor(Math.random()*13);
     var secondNumber = Math.floor(Math.random()*13);
-// assign value to correctAnswer
+    // assign value to correctAnswer
     correctAnswer = firstNumber * secondNumber; 
-// find the index of correctAnswer and remove it from the array of possible answers
+    // find the index of correctAnswer and remove it from the array of possible answers
     var correctAnswerIndex = answers.indexOf(correctAnswer);
     if (correctAnswerIndex > -1){
         answers.splice(correctAnswerIndex,1);
@@ -133,33 +133,38 @@ function generateQA(){
     }
     document.getElementById("question").innerHTML = firstNumber + 'x' + secondNumber;
 }
+// changed to this for loop for each answer box with an onclick here in js instead
+// of inline HTML
 
-function answerBoxClick(boxNum){
 // if we click on an answer box
-    var boxAnswer = document.getElementById(boxNum).innerHTML;
-// if we are playing
-    if (gameOn === true){
-// correct?
-// yes--> 
-        if(document.getElementById(boxNum).innerHTML == correctAnswer){
-// increase score by one
-            score++;
-            document.getElementById("scoreValue").innerHTML = score;
-// show correct box for 1s
-            show("correct");
-            setTimeout(function(){
-                hide("correct");
-            },700);
-// generate new Q&A
-            generateQA();
-// no--> 
-        }else {
-// show try again for one sec
-            show("wrong");
-            setTimeout(function(){
-                hide("wrong");
-            },700);
+for(b=1;b<5; b++){
+    document.getElementById("box"+b).onclick = function() {
+        // if we are playing
+        if (gameOn === true){
+        // correct?
+        // yes--> 
+            if(this.innerHTML == correctAnswer){
+            // increase score by one
+                score++;
+                document.getElementById("scoreValue").innerHTML = score;
+            // show correct box for 1s
+                show("correct");
+                setTimeout(function(){
+                    hide("correct");
+                },700);
+            // generate new Q&A
+                generateQA();
+            // no--> 
+            }else {
+            // show try again for one sec
+                show("wrong");
+                setTimeout(function(){
+                    hide("wrong");
+                },700);
+            }
         }
+
+
     }
 }
 
