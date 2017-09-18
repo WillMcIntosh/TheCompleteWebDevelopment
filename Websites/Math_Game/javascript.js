@@ -28,7 +28,6 @@ var gameCounter;
 var gameTimeLeft;
 var score;
 var gameOn = false;
-
 document.getElementById("startReset").onclick = function() {
     // if we click on the start/reset button
     // if we are playing
@@ -42,12 +41,13 @@ document.getElementById("startReset").onclick = function() {
         document.getElementById("scoreValue").innerHTML = score;
         document.getElementById("instruction").innerHTML = "Click on the correct answer.";
         // show countdown box
+        var countLeft = 60;
+        document.getElementById("timeRemainingValue").innerHTML = countLeft;
         show("timeRemaining");
         // make sure gameOver message is not showing
         hide("gameOver");
         document.getElementById("startReset").innerHTML = "Reset";
         // start reducing time by 1s in loops
-        var countLeft = 60;
         gameCounter = setInterval(function(){countLeft--; timeRemainingValue.innerHTML = countLeft;},1000);
         // if there is time left
         // yes--> continue
