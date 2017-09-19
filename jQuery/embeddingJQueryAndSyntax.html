@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>embedding jQuery and syntax</title>
+    <!-- we can host jquery on our own: -->
+    <!-- <script src="js/jquery&#45;3.2.1.min.js"></script> -->
+    <!--
+    or use google's cdn, which is faster since most users will have already downloaded 
+    it from other sites, and if not, CDNs will use the fastest download location. 
+    -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="myParagraph">jQuery stuff</p>
+    <script>
+        // waits until the document is ready and then hides all paragraphs
+        $(document).ready(function() {
+            $("p").hide(); //$( is similar to document.getElementBy ... 
+        });
+    
+    </script>
+</body>
+</html>
