@@ -24,4 +24,4 @@ This section covers JavaScript to change HTML style and content, objects, arrays
 
 ### Math Game Website:
   Created using HTML, CSS, and JavaScript, this website is a simple 0 to 12's multiplication table game where the user gets points for clicking the correct answer out of four for 60 seconds. I followed the tutorials for the HTML and CSS portions, and was able to pause the video and do the JavaScript on my own. I then watched the videos and compared methods. I had onclick events in my HTML file, which I removed and did in the JavaScript instead after uploading my code to Codepen and having it check my HTML. I also added additional browser compatibilty from tips on Codepen for radial and linear gradients. I didn't know that -webkit-etc need to go before the standard formatting in CSS. 
-Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/LzGzVx/){:target="_blank"}
+Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/LzGzVx/ target="_blank")
