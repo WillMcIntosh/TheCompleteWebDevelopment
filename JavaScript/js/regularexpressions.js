@@ -1,8 +1,8 @@
-// to ensure that the user input contains at least one digit, for example, use a 
+// to ensure that the user input contains at least one digit, for example, use a  
 // regex
 
 
-var str = "Atlanta!5691235";
+var str = "$10,000.57";
 // for a simple global search for the letter 'a':
 //var pattern = /a/g; 
 
@@ -38,6 +38,9 @@ var pattern = /^A/g;
 
 //for a line break character 
 var pattern =/\n/g;
+
+//my test of $ values
+var pattern = /\D\d\d$/ 
 
 
 /*
