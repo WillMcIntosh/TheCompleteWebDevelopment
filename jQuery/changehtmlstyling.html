@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change HTML Styling</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: 300px;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width:auto;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+    .sans-serif {
+        font-family: sans-serif;
+    }
+</style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+  </head>
+
+  <body>
+
+      <button id="changeFacebook">change facebook</button>
+      <button id="changeApple">change apple</button>
+      <button id="changeMicrosoft">change microsoft</button>
+      <button id="showMicrosoft">show microsoft</button>
+      <button id="changeGreat">Change great</button>
+      <div class="bluebox" id="facebook">
+          <p>
+              Facebook is <span id="great" class="great">great.</span>
+          </p>
+      </div>
+      <div class="yellowbox sans-serif" id="apple">
+          <p>
+              Apple
+          </p>
+      </div>
+      <div class="greenbox" id="microsoft">
+          <p>
+              Microsoft
+          </p>
+          <p>
+              <a id="microsoftLink" href="http://microsoft.com" title="Microsoft">Microsoft Link</a>
+          </p>
+
+      </div>
+      <p>Enter your name: <input></p>
+
+
+    <script type="text/javascript" src="js/changehtmlstyling.js"></script>
+  </body>
+
+
+</html>
