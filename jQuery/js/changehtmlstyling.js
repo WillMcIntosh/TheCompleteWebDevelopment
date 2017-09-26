@@ -41,10 +41,9 @@ $(function(){
     $("#showMicrosoft").click(function(){
         $("#microsoft").show();
     });
+    // wrap 'great' span in div tags
     $("#changeGreat").click(function(){
         $("#great").wrap("<div></div>");
-
-
     });
 
 });
