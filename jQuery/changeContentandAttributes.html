@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -21,7 +20,7 @@
     .greenbox{
         /*background colour from kcolorchooser*/
         background-color: #11a911;
-        height: 100px;
+        height: auto;
         width: auto;
     }
     .great{
@@ -43,13 +42,21 @@
           </p>
       </div>
       <div class="greenbox" id="microsoft">
+          <p id="microsoftParagraph">paragraph in microsoft</p>
           <p>
               Microsoft
           </p>
+          <p>
+              <a id="microsoftLink" href="http://microsoft.com" title="Microsoft">Microsoft Link</a>
+          </p>
 
       </div>
+      <p>Enter your name: <input></p>
       <button id="changeFacebook">Change Facebook Text</button>
       <button id="changeApple">Change Apple HTML</button>
+      <button id="changeInput">Change Input Value</button>
+      <button id="changeMicrosoft">Change Microsoft</button>
+      <button id="addText">add text</button>
 
     <script type="text/javascript" src="js/changeContentandAttributes.js"></script>
   </body>
