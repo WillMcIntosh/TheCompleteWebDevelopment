@@ -35,9 +35,19 @@ $(function(){
     // an element is droppable if we are able to drag and drop anothe element
     // inside of it
     $("#droppable").droppable({
-        drop: function(){
+        drop: function(event, ui){
             $(this).css("background-color", "#21dd85");
+            // remove the info paragraph
+            $(this).find("p").remove();
+            // get the text of the ui draggable element and append it to
+            // the droppable element in an empty div
+            $("<div></div>").text(ui.draggable.text()).appendTo(this);
         },
-        accept: "#facebook"
-        });
+        accept: "#list li"
+    });
+    // find the list items in #list and drag copies of them
+    $("#list").find("li").draggable({
+        helper: "clone",
+        appendTo: "body"
+    });
 });
