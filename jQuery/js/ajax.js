@@ -7,9 +7,9 @@
 $(function(){
     // load data from external file
     // Note: does not work in chromium
-    $("#facebook").load("/home/will/Classes/Udemy_webdev/jQuery/ajax/somedata.txt");
+    $("#facebook").load("/jQuery/ajax/somedata.txt");
     // load only the first paragraph
-    $("#apple").load("/home/will/Classes/Udemy_webdev/jQuery/ajax/somedata.txt #paragraph1");
+    $("#apple").load("/jQuery/ajax/somedata.txt #paragraph1");
     // this didn't load in chromium and firefox 
     /*
      * $("#button1").click(function(){
@@ -22,7 +22,7 @@ $(function(){
      */
     // got xml parsing error: junk after document element
     $("#button1").click(function(){
-        $.ajax({url : "ajax/somedata.txt"}).done(function(data){
+        $.ajax({url : "/jQuery/ajax/somedata.txt"}).done(function(data){
             $("#microsoft").html(data);
         });
             });

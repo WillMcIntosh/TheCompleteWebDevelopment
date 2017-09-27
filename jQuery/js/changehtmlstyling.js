@@ -27,7 +27,10 @@ $(function(){
     // want to randomly position apple div when it is clicked on. Position needs to be set as absolute
     $("#apple").click(function(){
         $("#apple").css('position', 'absolute');
-        $("#apple").css({'top': 200*Math.random(), 'left': 200*Math.random(), 'background-color':'rgb(' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random())  + ')'});
+        $("#apple").css({'top': 200*Math.random(), 'left': 200*Math.random(),
+            'background-color':'rgb(' + Math.floor(256*Math.random()) + ','
+            + Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random())
+            + ')'});
     });
     // want to toggle the class of the microsoft div on and off
     $("#changeMicrosoft").click(function(){
