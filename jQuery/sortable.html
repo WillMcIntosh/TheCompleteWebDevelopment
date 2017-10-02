@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sortable</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: auto;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: auto;
+        width:auto;
+        padding: 10px;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: auto;
+        width: auto;
+        padding: 10px;
+    }
+    .great{
+        color: #a352ff;
+    }
+    li {
+        font-size: 2em;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    #list .ui-selecting {
+        background: #740da0;
+    }
+    #list .ui-selected {
+        background: #953ebb;
+        color: white;
+    }
+    .connectedList {
+        border: 1px solid #eee;
+        min-height: 20px;
+    }
+</style>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+<!-- jQuery UI CDN from google -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+      <div class="bluebox" id="facebook">
+          <p>
+              Facebook is <span id="great" class="great">great.</span>
+          </p>
+      </div>
+      <div class="yellowbox" id="apple">
+          <ul id="list" class="connectedList">
+              //once you remove all of the items from the list it will disappear
+              add a minimum height to .connectedList
+              <li class="ui-state-default">BMW</li>
+              <li class="ui-state-default">Mercedes</li>
+              <li class="ui-state-default notSortable">Audi</li>
+          </ul>
+      </div>
+      <div class="greenbox" id="microsoft">          
+          <ul id="list2" class="connectedList">
+              <li class="ui-state-default">Ford</li>
+              <li class="ui-state-default">Toyota</li>
+              <li class="ui-state-default notSortable">Honda</li>
+          </ul>
+
+          <p>
+              Microsoft
+          </p>
+          <p><a href="http://microsoft.com">Microsoft link</a></p>
+
+      </div>
+          <p>Enter your name:<input></p>
+      <button id="button1">click me</button>
+      <button id="button2">or click me</button>
+
+    <script type="text/javascript" src="js/sortable.js"></script>
+  </body>
+
+
+</html>
