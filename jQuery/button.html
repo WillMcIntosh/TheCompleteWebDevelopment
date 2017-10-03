@@ -28,10 +28,14 @@
     }
 </style>
 <!-- jQuery -->
+<!-- changed jQuery to match what the class was using instead of latest 1.12 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
-
+<!--
+  same with jQuery UI, I was having trouble getting icons to work as they are in
+  class vidoes
+-->
 <!-- jQuery UI CDN from google -->
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   </head>
 
@@ -40,29 +44,39 @@
           <p>
               Facebook is <span id="great" class="great">great.</span>
           </p>
+          <div id="checkboxes">
+              <input id="checkbox1" type="checkbox">
+              <label for="checkbox1">Audi</label>
+              <input id="checkbox2" type="checkbox">
+              <label for="checkbox2">Mercedes</label>
+              <input id="checkbox3" type="checkbox">
+              <label for="checkbox3">BMW</label>
+          </div>
       </div>
       <div class="yellowbox" id="apple">
-          <p>
-              Apple
-          </p>
+          <input id="myCheckbox" type="checkbox">
+          <label for="myCheckbox">Checkbox</label>
       </div>
       <div class="greenbox" id="microsoft">
-          <p>
-              Microsoft
-          </p>
+          <form>
+              <div id="radioBoxes">
+                  <input id="radioBox1" type="radio" name="radioBoxes">
+                  <label for="radioBox1">Chevrolet</label>
+                  <input id="radioBox2" type="radio" name="radioBoxes">
+                  <label for="radioBox2">Toyota</label>
+                  <input id="radioBox3" type="radio" name="radioBoxes">
+                  <label for="radioBox3">Ford</label>
+              </div>
+          </form>
           <p><a href="http://microsoft.com">Microsoft link</a></p>
 
       </div>
           <p>Enter your name:<input></p>
       <button id="button1">button 1</button>
       <button id="button2">button 2</button>
-      <button id="button3">button 3</button>
+      <button id="button3">button3</button>
     <script type="text/javascript" src="js/button.js"></script> 
   </body>
 
 
 </html>
-
-
-
-
