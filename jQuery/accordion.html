@@ -1,0 +1,81 @@
+<!DOCTYPE html/
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accordion</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: auto;
+        width: auto;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width:auto;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+</style>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+<!-- jQuery UI CDN from google -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+      <div id="resizer" class="ui-widget-content">
+          <div class="bluebox ui-corner-all" id="facebook">
+              <h3>Section 1</h3>
+              <div>
+                  <p>Content 1</p>
+                  <p>Content 1</p>
+                  <p>Content 1</p>
+                  <p>Content 1</p>
+                  <p>Content 1</p>
+                  <p>Content 1</p>
+              </div>
+              <h3>Section 2</h3>
+              <div>
+                  <p>Content 2</p>
+              </div>
+              <h3>Section 3</h3>
+              <div>
+                  <p>Content 3</p>
+              </div>
+          </div>
+      </div>
+      <div class="yellowbox ui-corner-all" id="apple">
+          <p>
+              Apple
+          </p>
+      </div>
+      <div class="greenbox ui-corner-all" id="microsoft">
+          <p>
+              Microsoft
+          </p>
+          <p><a href="http://microsoft.com">Microsoft link</a></p>
+
+      </div>
+          <p>Enter your name:<input></p>
+      <button id="button1">click me</button>
+      <button id="button2">or click me</button>
+
+    <script type="text/javascript" src="js/accordion.js"></script>
+  </body>
+
+
+</html>
