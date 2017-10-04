@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Buttons</title>
+    <title>Dialog</title>
     <style>
     .bluebox{
         /*background color from colorzilla extension*/
@@ -25,6 +25,9 @@
     }
     .great{
         color: #a352ff;
+    }
+    .ui-icon-alert{
+        float: left;
     }
 </style>
 <!-- jQuery -->
@@ -53,11 +56,20 @@
           <p><a href="http://microsoft.com">Microsoft link</a></p>
 
       </div>
-          <p>Enter your name:<input></p>
-      <button id="button1">button 1</button>
-      <button id="button2">button 2</button>
-      <button id="button3">button 3</button>
-    <script type="text/javascript" src="js/button.js"></script> 
+      <div id="myDialog" title="This is a dialog.">
+          <p>Welcome to our page</p>
+      </div>
+      <button id="open">Open Dialog</button>
+      <div id="confirmation" title="Leave the page?">
+          <p>
+              <span class="ui-icon ui-icon-alert"></span> You will lose all
+              unsaved work. Are you sure?
+          </p>
+      </div>
+      <button id="leavePage">Previous Page</button>
+      
+
+    <script type="text/javascript" src="js/dialog.js"></script> 
   </body>
 
 
