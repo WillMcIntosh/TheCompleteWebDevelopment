@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Slider</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: auto;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width:auto;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+    #sliderValue, #mileageRange {
+        color: #2074cf;
+        border: 0;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+</style>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+
+<!-- jQuery UI CDN from google -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+      <div class="bluebox ui-corner-all" id="facebook">
+          <p>
+              Facebook is <span id="great" class="great">great.</span>
+          </p>
+      </div>
+      <div class="yellowbox ui-corner-all" id="apple">
+          <p>
+              Apple
+          </p>
+      </div>
+      <div class="greenbox ui-corner-all" id="microsoft">
+          <p>
+              Microsoft
+          </p>
+          <p><a href="http://microsoft.com">Microsoft link</a></p>
+
+      </div>
+      <div id="slider"></div>
+      <br />
+          <label for="slider">Value: </label>
+          <input id="sliderValue" type="text" name="sliderValue" readonly>
+
+      <div id="rangedSlider"></div>
+      <br />
+          <label for="rangedSlider">Mileage: </label>
+          <input id="mileageRange" type="text" name="mileageRange" readonly>
+
+    <script type="text/javascript" src="js/slider.js"></script> 
+  </body>
+
+
+</html>
+
+
+
+
