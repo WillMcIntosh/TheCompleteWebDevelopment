@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Select Menu</title>
+    <style>
+    .bluebox{
+        /*background color from colorzilla extension*/
+        background-color: #3B5998;
+        color: white;
+        height: 100px;
+        width: auto;
+    }
+    .yellowbox{
+        background-color: #a1a246;
+        height: 100px;
+        width:auto;
+    }
+    .greenbox{
+        /*background colour from kcolorchooser*/
+        background-color: #11a911;
+        height: 100px;
+        width: auto;
+    }
+    .great{
+        color: #a352ff;
+    }
+    #strength {
+        width: 150px;
+    }
+    #strength2 {
+        width: 150px;
+    }
+
+</style>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+
+<!-- jQuery UI CDN from google -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+      <div class="bluebox ui-corner-all" id="facebook">
+          <label for="strength">Select your biggest strength</label>
+          <br />
+          
+          <select id="strength" name="strength">
+              <option >Motivation</option>
+              <option selected="selected">Creativity</option>
+              <option >Curiosity</option>
+              <option >Integrity</option>
+              <option >Modesty</option>
+          </select>
+      </div>
+      <div class="yellowbox ui-corner-all" id="apple">
+          <!--
+            make a select menu like before but have the selection options
+            be in groups
+            -->
+          <label for="strength2">Select your biggest strength</label>
+          <br />
+          <form>
+              <select id="strength2" name="strength2">
+                  <optgroup label="Group 1">
+                      <option >Motivation</option>
+                      <option selected="selected">Creativity</option>
+                      <option >Curiosity</option>
+                  </optgroup>
+                  <optgroup label="Group 2">
+                      <option >Integrity</option>
+                      <option >Modesty</option>
+                  </optgroup>
+              </select>
+          </form>
+         
+      </div>
+      <div class="greenbox ui-corner-all" id="microsoft">
+          <p>
+              Microsoft
+          </p>
+          <p><a href="http://microsoft.com">Microsoft link</a></p>
+
+      </div>
+          <p>Enter your name:<input></p>
+      <button id="button1">button 1</button>
+      <button id="button2">button 2</button>
+      <button id="button3">button 3</button>
+    <script type="text/javascript" src="js/selectmenu.js"></script> 
+  </body>
+
+
+</html>
+
+
+
+
