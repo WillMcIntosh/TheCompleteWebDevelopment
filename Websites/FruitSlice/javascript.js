@@ -21,6 +21,12 @@ $(function(){
             trialsLeft = 3;
             addHearts();
 
+            //change button text to reset game
+            $("#startReset").html("Reset Game");
+
+            // start sending fruits
+            startAction();
+
         }
 
    
@@ -57,3 +63,4 @@ function addHearts(){
 // slice a fruit
 //      play sound
 //      explode fruit
+

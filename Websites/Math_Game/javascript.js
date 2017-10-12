@@ -39,7 +39,8 @@ document.getElementById("startReset").onclick = function() {
         // set score to 0
         score = 0;
         document.getElementById("scoreValue").innerHTML = score;
-        document.getElementById("instruction").innerHTML = "Click on the correct answer.";
+        document.getElementById("instruction").innerHTML = "Click on the correct
+        answer.";
         // show countdown box
         var countLeft = 60;
         document.getElementById("timeRemainingValue").innerHTML = countLeft;
@@ -48,7 +49,8 @@ document.getElementById("startReset").onclick = function() {
         hide("gameOver");
         document.getElementById("startReset").innerHTML = "Reset";
         // start reducing time by 1s in loops
-        gameCounter = setInterval(function(){countLeft--; timeRemainingValue.innerHTML = countLeft;},1000);
+        gameCounter = setInterval(function(){countLeft--; 
+            timeRemainingValue.innerHTML = countLeft;},1000);
         // if there is time left
         // yes--> continue
         // no--> game over (call gameOver function after 60 sec)
