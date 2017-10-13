@@ -39,14 +39,19 @@ $(function(){
     $("#fruit1").mouseover(function(){
         score++;
         $("#scoreValue").html(score); //update score
+
+        $("#sliceSound")[0].currentTime = 0;
         // need index 0 for first element of the array in jQ
         $("#sliceSound")[0].play();    
 
         // stop fruit from falling
-        stopAction();
+        clearInterval(action);
 
-        //send new fruit
-        startAction();
+        // hide fruit with an animation (requires jQueryUI)
+        $("#fruit1").hide("explode", 500);
+
+        //send new fruit after explosion finishes
+        setTimeout(startAction, 500);
     });
 
 // functions 
