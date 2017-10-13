@@ -36,7 +36,6 @@ $(function(){
         }
     });
 
-});
 // functions 
 
 function addHearts(){
@@ -46,13 +45,6 @@ function addHearts(){
     }
 }
 function startAction(){
-    //fruit from openclipart.com
-    // $("#fruitContainer").append('<img src="images/apple.png" class="fruit">');
-    /*
-     * adding a new HTML element to the fruitContainer is not the best way of
-     * doing this because every time we add a new element it will require more
-     * memory, and we are adding elements constantly for the game.
-     */
     $("#fruit1").show();
     chooseFruit(); //choose a random fruit
 
@@ -104,15 +96,19 @@ function startAction(){
         }
     },10);
 }
+
+// select a random fruit from the array
 function chooseFruit(){
     $("#fruit1").attr('src', 'images/' + fruits[Math.round(Math.random()*8)]
         + '.png');
 }
+
 //stop dropping fruits
 function stopAction(){
     clearInterval(action);
     $("#fruit1").hide();
 }
+});
 // slice a fruit
 //      play sound
 //      explode fruit
