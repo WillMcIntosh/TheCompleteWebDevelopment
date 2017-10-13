@@ -88,6 +88,7 @@ function startAction(){
 
     // generate a random step between 1 and 6
     step = 1 + Math.round(5*Math.random());
+    console.log(step);
     // move fruit down by one step every 10ms
     action = setInterval(function(){
         // access the top property by accessing .position() which is an
