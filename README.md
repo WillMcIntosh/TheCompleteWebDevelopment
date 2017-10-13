@@ -4,18 +4,20 @@ Following along with "The Complete Web Development Course" by Development Island
 
 ## HTML
 
-This section covers headings, images, inline vs block elements, lists, tables, forms.
-
+  This section covers headings, images, inline vs block elements, lists, tables, forms.
 marketplaceCheckout.html is a sample checkout form created only using HTML with entry forms for address, a drop down for shipping method, radio buttons for payment method, and check boxes to choose whether to sign up for email updates. 
 
 ## CSS
 
-This section covers Cascading Style Sheets to change font, alignment, background, with some transforms and transitions and notes on browser compatibilty. Emphasis on the box model of padding, border, outline, and margin helped to solidify CSS alignment concepts. 
+  This section covers Cascading Style Sheets to change font, alignment, background, with some transforms and transitions and notes on browser compatibilty. Emphasis on the box model of padding, border, outline, and margin helped to solidify CSS alignment concepts. 
 
 ## JavaScript
 
-This section covers JavaScript to change HTML style and content, objects, arrays, loops, errors, setInterval and setTimeout, and cookies. Activities during this section included a simple while loop for spending money, a password validation using regular expressions, and a random colour generator. The section was concluded with the Math Game project.
+  This section covers JavaScript to change HTML style and content, objects, arrays, loops, errors, setInterval and setTimeout, and cookies. Activities during this section included a simple while loop for spending money, a password validation using regular expressions, and a random colour generator. The section was concluded with the Math Game project.
 
+## jQuery
+
+  How to use the jQuery library to manipulate HTML and CSS elements, along with AJAX to change only part of the page, and jQuery effects to create visual effects and animations. Introduction to jQuery UI for both themes and specific effects to make the page more user interactive. This section was concluded with a fruit slice game project.
 
 ## Websites
 
