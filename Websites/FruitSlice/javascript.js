@@ -36,14 +36,42 @@ $(function(){
         }
     });
 
-// functions 
+    $("#fruit1").mouseover(function(){
+        score++;
+        $("#scoreValue").html(score); //update score
+        // need index 0 for first element of the array in jQ
+        $("#sliceSound")[0].play();    
 
+        // stop fruit from falling
+        stopAction();
+
+        //send new fruit
+        startAction();
+    });
+
+// functions 
+    
+// select a random fruit from the array
+function chooseFruit(){
+    $("#fruit1").attr('src', 'images/' + fruits[Math.round(Math.random()*8)]
+        + '.png');
+}
+
+//stop dropping fruits
+function stopAction(){
+    clearInterval(action);
+    $("#fruit1").hide();
+}
+
+// add the correct number of hearts to the trials left block
 function addHearts(){
     $("#trialsLeft").empty();
     for(i=0; i< trialsLeft; i++){
         $("#trialsLeft").append(' <img src="images/heart.png" class="life"> ');
     }
 }
+
+// start dropping random fruits
 function startAction(){
     $("#fruit1").show();
     chooseFruit(); //choose a random fruit
@@ -88,7 +116,7 @@ function startAction(){
                 $("#startReset").html("Start Game"); //change button back
                 // show Game Over
                 $("#gameOver").show();
-                $("gameOver").html('<p>Game Over!</p><p>Your Score is ' + score 
+                $("#gameOver").html('<p>Game Over!</p><p>Your Score is ' + score 
                     + '</p>');
                 $("#trialsLeft").hide();
                 stopAction();
@@ -97,17 +125,13 @@ function startAction(){
     },10);
 }
 
-// select a random fruit from the array
-function chooseFruit(){
-    $("#fruit1").attr('src', 'images/' + fruits[Math.round(Math.random()*8)]
-        + '.png');
-}
-
 //stop dropping fruits
+
 function stopAction(){
     clearInterval(action);
     $("#fruit1").hide();
 }
+
 });
 // slice a fruit
 //      play sound
