@@ -56,7 +56,7 @@ html {
     display: none;
 }
 
-#question {
+#fruitContainer {
     width: 650px;
     height: 400px;
     margin: 50px auto 10px auto;
@@ -70,6 +70,9 @@ html {
     text-align: center;
     font-family: cursive , sans-serif;
     color: black;
+    /* position is relative so fruit can be set above */
+    position: relative;
+    overflow: hidden; /* any element outside boundary won't be shown*/
 }
 
 #instruction {
@@ -198,4 +201,9 @@ html {
     width: 16px;
     height: 16px;
     margin: 0 5px;
+}
+.fruit {
+    display: none;
+    /* absolute so we can set top and left properties with jquery */
+    position: absolute;
 }
