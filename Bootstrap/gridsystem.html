@@ -9,6 +9,20 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #deviceSize {
+            margin-bottom: 30px;
+        }
+        .bluebox {
+            background-color: #2fc5b8;
+            height: 200px;
+        }
+        .greenbox {
+            background-color: #8deb46;
+            height: 200px;
+        }
+
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,12 +33,49 @@
   </head>
   <body>
       <div class="container-fluid">
-          <h1>Hello, world!</h1>
+          <div id="deviceSize">Device Size: </div>
+          <!--
+            use classes for bootstrap grip to size divs to take up a number of
+            columns out of 12. Below will style the page so that in medium device
+            settings we can have both divs on the same row, one taking up 8
+            columns and the other taking up 4
+          -->
+          <div class="bluebox col-md-8 col-sm-6 col-xs-3 col-lg-1">
+          </div>
+          <div class="greenbox col-md-4 col-sm-6 col-xs-9 col-lg-11">
+              <!--
+                larger device sizes will inherit the smaller device settings, but
+                smaller devices will stack. To change small devices, add col-sm-#
+                as well so the sum is 12 still
+              -->
+          </div>
       </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        // js code to show window size on resize
+        $(function(){
+            $(window).resize(function(){
+                var windowWidth = $(window).width();
+                if(windowWidth<768){
+                    $('#deviceSize').text('Device Size: ' + windowWidth +
+                        'px - Extra small devices (phones)');
+                }else if(windowWidth<992){
+                    $('#deviceSize').text('Device Size: ' + windowWidth +
+                        'px - Small devices (tablets)');
+                }else if(windowWidth<1200){
+                    $('#deviceSize').text('Device Size: ' + windowWidth +
+                        'px - Medium devices (laptops)');
+               }else {
+                    $('#deviceSize').text('Device Size: ' + windowWidth +
+                        'px - Large devices (desktops)');
+               }
+            });
+        });
+    
+    </script>
   </body>
 </html>
