@@ -119,13 +119,13 @@ function startAction(){
             }else{
                 //game over
                 playing = false;
+                stopAction();
                 $("#startReset").html("Start Game"); //change button back
                 // show Game Over
                 $("#gameOver").show();
                 $("#gameOver").html('<p>Game Over!</p><p>Your Score is ' + score 
                     + '</p>');
                 $("#trialsLeft").hide();
-                stopAction();
             }
         }
     },10);
