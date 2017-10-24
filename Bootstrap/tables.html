@@ -25,13 +25,17 @@
                 <th>Model</th>
                 <th>Storage</th>
             </tr>
+            <!-- normally items will stack vertically when screen size is too
+            small -->
             <tr>
-                <td>Apple</td>
+                <td>AppleAppleAppleAppleAppleApple
+                AppleAppleAppleAppleAppleApple</td>
                 <td>iPhone 6</td>
                 <td>32GB</td>
             </tr>
             <tr>
-                <td>Apple</td>
+                <td>AppleAppleAppleAppleAppleApple
+                AppleAppleAppleAppleAppleAppleApple</td>
                 <td>iPhone 5</td>
                 <td>32GB</td>
             </tr>
@@ -42,14 +46,16 @@
             </tr>
         </table>
         <!-- for striped rows in table -->
-        <table class="table table-striped">
+        <table class="table table-striped table-hover table-condensed
+            table-bordered">
             <tr>
                 <th>Phone Make</th>
                 <th>Model</th>
                 <th>Storage</th>
             </tr>
-            <tr>
-                <td>Apple</td>
+            <tr> 
+                <td>AppleAppleAppleAppleAppleApple
+                AppleAppleAppleAppleAppleAppleApple</td>
                 <td>iPhone 6</td>
                 <td>32GB</td>
             </tr>
@@ -64,6 +70,37 @@
                 <td>32GB</td>
             </tr>
         </table>
+                    <!--
+                    to make the table scroll horizontally instead of vertically
+                     div class = table-responsive
+                    -->
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-condensed
+                table-bordered">
+                <tr>
+                    <th>Phone Make</th>
+                    <th>Model</th>
+                    <th>Storage</th>
+                </tr>
+                <tr> 
+                    <td>AppleAppleAppleAppleAppleApple
+                    AppleAppleAppleAppleAppleAppleApple</td>
+                    <td>iPhone 6</td>
+                    <td>32GB</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>iPhone 5</td>
+                    <td>32GB</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td>iPhone 5s</td>
+                    <td>32GB</td>
+                </tr>
+            </table>
+        </div>
 
       </div>
 
