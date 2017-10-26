@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head 
+  content must come *after* these tags -->
+  <title>Navbars</title>
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media 
+    queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+    </script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- to fix navbar to top of screen add class navbar-fixed-top -->
+  <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Store</a>
+        <!--
+          Bootstrap has data attributes that can be used to create interactions
+          without using any JS
+        -->
+        <button type="button" class="navbar-toggle"
+          data-target="#navbarCollapse" data-toggle="collapse">
+          <!-- for screen readers -->
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbarCollapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Departments <span class="caret"></span></a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-info">Go</button>
+            </span>
+            <label class="sr-only" for="search">Search</label>
+            <input id="search" class="form-control" type="text"
+            placeholder="Search">
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          </div>
+        </form>
+        <form class="navbar-form navbar-right">
+          <input class="btn btn-success" type="button" value="Login">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- to prevent paragraphs from going behind the navbar, style container -->
+  <div class="container-fluid" style="margin-top:60px">
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+    <p>Paragraph 11</p>
+    <p>Paragraph 12</p>
+    <p>Paragraph 13</p>
+    <p>Paragraph 14</p>
+    <p>Paragraph 15</p>
+    <p>Paragraph 16</p>
+    <p>Paragraph 17</p>
+    <p>Paragraph 18</p>
+    <p>Paragraph 19</p>
+    <p>Paragraph 20</p>
+    <p>Paragraph 21</p>
+    <p>Paragraph 22</p>
+    <p>Paragraph 23</p>
+    <p>Paragraph 24</p>
+    <p>Paragraph 25</p>
+    <p>Paragraph 26</p>
+    <p>Paragraph 27</p>
+    <p>Paragraph 28</p>
+    <p>Paragraph 29</p>
+    <p>Paragraph 30</p>
+    <p>Paragraph 31</p>
+    <p>Paragraph 32</p>
+    <p>Paragraph 33</p>
+    <p>Paragraph 34</p>
+    <p>Paragraph 35</p>
+    <p>Paragraph 36</p>
+    <p>Paragraph 37</p>
+    <p>Paragraph 38</p>
+    <p>Paragraph 39</p>
+    <p>Paragraph 40</p>
+    <p>Paragraph 41</p>
+    <p>Paragraph 42</p>
+    <p>Paragraph 43</p>
+    <p>Paragraph 44</p>
+    <p>Paragraph 45</p>
+    <p>Paragraph 46</p>
+    <p>Paragraph 47</p>
+    <p>Paragraph 48</p>
+    <p>Paragraph 49</p>
+    <p>Paragraph 50</p>
+  </div>
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <!-- Include all compiled plugins (below), or include individual files as 
+    needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
