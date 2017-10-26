@@ -115,8 +115,74 @@
               <br>
               <input type="text" class="form-control" placeholder="Text Input"
               disabled>
+              <br>
+              <hr>
 
-          
+              <!-- 
+              to put all of the inputs into a column and use bootstrap styling
+              add all to a row div and add class col to each form group 
+              -->
+              <div class="row">
+              
+                  <!-- to show success, warning, error in text inputs -->
+                  <div class="form-group has-success col-xs-2">
+                    <label for="textInput1" class="sr-only">Text Input 1</label>
+                    <input type="text" class="form-control input-sm" id="textInput1"
+                    placeholder="Text Input 1">
+                  </div>
+                  <!--
+                    text input should have labels to help with accessibility
+                    software, to hide labels class = sr-only
+                  -->
+                  <div class="form-group has-error col-xs-6">
+                    <label for="textInput2" class="sr-only">Text Input 2</label>
+                    <input type="text" class="form-control input-lg" id="textInput2"
+                    placeholder="Text Input 2">
+                  </div>
+
+                  <div class="form-group has-error col-xs-4">
+                    <label for="textInput3" class="sr-only">Text Input 3</label>
+                    <input type="text" class="form-control" id="textInput3"
+                    placeholder="Text Input 3">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <!-- to add a glyph icon from the bootstrap website to a text input -->
+
+            <div class="form-group has-feedback has-warning">
+                <label class="sr-only" for="textInput4">Text Input</label>
+                <input id="textInput4" class="form-control" type="text"
+                placeholder="Text Input">
+                <span class="glyphicon glyphicon-alert form-control-feedback"></span>
+                <!-- for screen readers -->
+                <span class="sr-only">warning</span>
+            </div>
+            <br>
+            <!-- for form feedback such as success -->
+            <div class="input-group has-feedback has-success">
+                <label class="sr-only" for="textInput5">Text Input</label>
+                <span class="input-group-addon">@</span>
+                <input id="textInput5" class="form-control" type="text"
+                placeholder="Text Input">
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                <!-- for screen readers -->
+                <span class="sr-only">success</span>
+            </div>
+            <br>
+
+            <!-- to add a button to the input -->
+            <div class="input-group has-feedback has-success">
+                <label class="sr-only" for="textInput6">Text Input</label>
+                <span class="input-group-btn"><button type="button" class="btn
+                        btn-default">Submit</button></span>
+                <input id="textInput6" class="form-control" type="text"
+                placeholder="Text Input">
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                <!-- for screen readers -->
+                <span class="sr-only">success</span>
+            </div>
+
           </form>
 
       </div>
