@@ -30,3 +30,7 @@ Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/LzGzVx/)
 
 ### Fruit Slice Game:
   Created using HTML, CSS, jQuery, and jQueryUI, this is a fruit slice game with fruit that explodes and makes a sound on mouseover. Using HTML and jQuery, it will make a slicing sound on mouse over, and using jQuery and jQuery UI, the fruit does an explode animation. Each new fruit is shown/hidden with timing events.
+  
+### App Landing Page:
+  Created using HTML, CSS, and Bootstrap. A responsive sample page for a mobile travel app. Used a background image in a jumbotron from [FreeNatureStock](http://freenaturestock.com/) and an airplane logo from [logomakr](https://logomakr.com/). Using media queries, the page will resize for different device sizes.
+  Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/GOprgm/)
