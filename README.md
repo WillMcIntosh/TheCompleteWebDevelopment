@@ -13,11 +13,14 @@ marketplaceCheckout.html is a sample checkout form created only using HTML with 
 
 ## JavaScript
 
-  This section covers JavaScript to change HTML style and content, objects, arrays, loops, errors, setInterval and setTimeout, and cookies. Activities during this section included a simple while loop for spending money, a password validation using regular expressions, and a random colour generator. The section was concluded with the Math Game project.
+  This section covers JavaScript to change HTML style and content, objects, arrays, loops, errors, setInterval and setTimeout, and cookies. Activities during this section included a simple while loop for spending money, a password validation using regular expressions, and a random color generator. The section was concluded with the Math Game project.
 
 ## jQuery
 
   How to use the jQuery library to manipulate HTML and CSS elements, along with AJAX to change only part of the page, and jQuery effects to create visual effects and animations. Introduction to jQuery UI for both themes and specific effects to make the page more user interactive. This section was concluded with a fruit slice game project.
+  
+## Bootstrap
+  Introduction to responsive design with Twitter Bootstrap. Topics covered included the Bootstrap CSS grid system, forms, tables, navbars, jumbotrons, dropdown menus, and buttons. This section was concluded with five projects.
 
 ## Websites
 
