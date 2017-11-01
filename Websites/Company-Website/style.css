@@ -1,19 +1,55 @@
 /* style body element by adding background image and set to cover */
-
+body {
+    background: url(http://freenaturestock.s3.amazonaws.com/988.jpg) 
+        no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
 /* add font family */
 
 /* style a brand image */
+.logo {
+    height: 30px;
+}
 
 /* style nav bar using css (hover state too) */
+.navbar-inverse {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.nav li{
+    line-height: 70px;
+    height: 70px;
+    font-size: 17px;
+    padding: 10px 0;
+    margin-right: 35px;
+}
 
 /* title in a jumbotron (text-align) */
+.jumbotron {
+    color: white;
+    background-color: rgba(0,0,0,0);
+    text-align: center;
+}
 
 /* limit the width of the icon section */
+.container {
+    max-width: 1000px;
+}
 
 /* icons with text using bootstrap grid */
+.icons {
+    text-align: center;
+    color: white;
+}
+
+.bodyimage {
+    height: 100px;
+}
 
 /* contact button */
 
 /* style footer */
 
 /* change icons size and positioning with media queries */
+@media (max-width 768px){}
