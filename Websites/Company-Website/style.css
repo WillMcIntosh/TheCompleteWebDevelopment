@@ -1,5 +1,6 @@
 /* style body element by adding background image and set to cover */
 body {
+    font-family: 'Arvo', serif;
     background: url(http://freenaturestock.s3.amazonaws.com/988.jpg) 
         no-repeat center center;
     background-attachment: fixed;
@@ -25,6 +26,10 @@ body {
     margin-right: 35px;
 }
 
+.nav li:hover {
+    border-bottom: 1px solid #00FFB8;
+}
+
 /* title in a jumbotron (text-align) */
 .jumbotron {
     color: white;
@@ -48,8 +53,36 @@ body {
 }
 
 /* contact button */
+.buttons {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.buttons .btn {
+    width: 240px;
+    color: white;
+    background-color: rgba(0,255,184,0.5);
+    margin-top: 20px;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.buttons .btn:hover {
+    background-color: rgba(0,0,0,0.7);
+}
 
 /* style footer */
+.footer {
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 0;
+    text-align: left;
+    font-size: 17px;
+}
 
 /* change icons size and positioning with media queries */
-@media (max-width 768px){}
+@media (max-width: 768px){
+    .bodyimage{
+        height: 70px;
+    }
+}
