@@ -19,8 +19,7 @@ body {
 }
 
 .nav li{
-    line-height: 70px;
-    height: 70px;
+    color: #fff;
     font-size: 17px;
     padding: 10px 0;
     margin-right: 35px;
@@ -28,6 +27,9 @@ body {
 
 .nav li:hover {
     border-bottom: 1px solid #00FFB8;
+    /* prevent navbar from growing by one px when hovering */
+    padding-bottom: 9px;
+    cursor: pointer;
 }
 
 /* title in a jumbotron (text-align) */
