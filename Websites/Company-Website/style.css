@@ -64,16 +64,18 @@ body {
 /* contact button */
 .buttons {
     text-align: center;
-    padding-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .buttons .btn {
-    width: 240px;
     color: white;
     background-color: rgba(0,255,184,0.5);
-    margin-top: 20px;
     border-radius: 10px;
     border-width: 0;
+    font-size: 18px;
+    padding: 10px 70px;
+    letter-spacing: 1.3px;
 }
 
 .buttons .btn:hover {
