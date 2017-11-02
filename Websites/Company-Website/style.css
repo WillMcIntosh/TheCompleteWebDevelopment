@@ -37,6 +37,9 @@ body {
     color: white;
     background-color: rgba(0,0,0,0);
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 2.5px;
 }
 
 /* limit the width of the icon section */
@@ -48,6 +51,10 @@ body {
 .icons {
     text-align: center;
     color: white;
+}
+
+.icons p {
+    font-size: 15px;
 }
 
 .bodyimage {
