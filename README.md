@@ -37,3 +37,6 @@ Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/LzGzVx/)
 ### App Landing Page:
   Created using HTML, CSS, and Bootstrap. A responsive sample page for a mobile travel app. Used a background image in a jumbotron from [FreeNatureStock](http://freenaturestock.com/) and an airplane logo from [logomakr](https://logomakr.com/). Using media queries, the page will resize for different device sizes.
   Hosted at [Code Pen](https://codepen.io/WillMcIntosh/full/GOprgm/)
+  
+### Company Website
+  After commenting in the instructions, I paused the video and pulled up the finished file from the class files in a separate Chrome tab and did my best to mimic it using what I had learned in class. I would occasionally have to peek at the styling using Chrome developer tools to learn things like the background image styling using `background-attachment: fixed` and `background-size: cover`. When I had created the site, I watched the videos on fast forward and made some adjustments to the style so that it matched the example site perfectly. Hosted at http://willmcintosh.thecompletewebhosting.com/Websites/Company-Website/
