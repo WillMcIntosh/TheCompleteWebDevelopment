@@ -1,3 +1,10 @@
+/* style so footer will stick to the bottom */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 /* style body element by adding background image and set to cover */
 body {
     font-family: 'Arvo', serif;
@@ -89,6 +96,11 @@ body {
     padding: 10px 0;
     text-align: left;
     font-size: 17px;
+    /* so that footer will stay on bottom of screen */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 /* change icons size and positioning with media queries */
