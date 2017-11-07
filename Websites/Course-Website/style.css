@@ -3,7 +3,12 @@
 /* add font family to body element */
 
 /* set video as background of page and set to fixed, z-index so it's behind */
-
+video#bgVideo {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
 /* hide video and set pic for small devices (media queries) */
 
 /* style nav bar */
