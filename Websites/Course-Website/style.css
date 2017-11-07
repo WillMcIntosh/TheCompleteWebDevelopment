@@ -25,6 +25,9 @@ video#bgVideo {
     padding-top: 15%;
 }
 
+.container {
+    max-width: 1000px;
+}
 /* reduce margin-bottom, style button and hover state */
 #home h1 {
     margin-bottom: 30px;
@@ -46,7 +49,24 @@ video#bgVideo {
     background-color: rgba(29, 167, 179, 0.5);
 }
 /* style about section like company website */
+#about {
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
 
+#about h2 {
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.aboutImage {
+    height: 120px;
+}
 /* add padding top so scrollspy will work correctly */
 
 /* limit about section width in big devices */
