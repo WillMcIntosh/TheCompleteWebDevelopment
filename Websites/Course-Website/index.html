@@ -12,7 +12,9 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
   </head>
   <body>
     <!-- create video for body element background -->
@@ -21,9 +23,43 @@
     <video autoplay loop mute id="bgVideo">
       <source src="images/nature_video.mp4" type="video/mp4">
     </video>
+    <nav role="navigation" class="navbar navbar-default navbar-custom navbar-fixed-top"
+      id="myNavBar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Complete Web Development Couse</a>
+          <button type="button" class="navbar-toggle"
+            data-target="#navbarCollapse" data-toggle="collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
     <!-- create collapsable nav bar, connected to different sections with scrollspy -->
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+          <!--
+            class navbar-right so that list items align right on big screens
+            but don't align right in dropdown on small screens
+          -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#promise">Our Promise</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- create home section with title, goal, and join button -->
+    <div id="home" class="jumbotron">
+      <div class="container">
+        <h1>Complete Web Development Course</h1>
+        <h2>Go from zero skills to cash earning web developer</h2>
+        <p><a class="btn" href="#">Join us Now!</a></p>
+      </div>
+    </div>
 
     <!-- create about section with details, grid system images and paragraphs -->
 
