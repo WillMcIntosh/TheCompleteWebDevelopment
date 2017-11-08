@@ -67,16 +67,31 @@ video#bgVideo {
 .aboutImage {
     height: 120px;
 }
-/* add padding top so scrollspy will work correctly */
-
-/* limit about section width in big devices */
 
 /* style promise section (padding top)  */
+#promise {
+    padding-top: 100px;
+}
 
 /* set carousel width to not take up full page */
+#myCarousel {
+    width: 60%;
+    /* center the carousel with margin */
+    margin: 0 auto;
+}
+
+.carousel-inner .item img {
+    height: 400px;
+    margin: 0 auto;
+}
 
 /* move captions to under pics */
-
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
+}
 /* style pics inside carousel for different devices */
 
 /* style nav brand text */
