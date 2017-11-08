@@ -1,6 +1,7 @@
 /* style body element (position relative so scrollspy works) */
 body {
     font-family: 'Vollkorn', sans-serif;
+    position: relative;
 }
 /* add font family to body element */
 
@@ -12,6 +13,15 @@ video#bgVideo {
     z-index: -100;
 }
 /* hide video and set pic for small devices (media queries) */
+@media (max-width: 768px){
+    body{
+        background: url(http://www.xsjjys.com/data/out/223/WHDQ-513589122.jpeg) center center fixed;
+        background-size: cover;
+    }
+    #bgVideo{
+        display: none;
+    }
+}
 
 /* style nav bar */
 
@@ -92,9 +102,26 @@ video#bgVideo {
     right: auto;
     height: 200px;
 }
-/* style pics inside carousel for different devices */
-
-/* style nav brand text */
+/* style pics inside carousel and nav brand text for different devices */
+@media (max-width: 768px){
+    .carousel-inner .item img {
+        height: 300px;
+    }
+    .carousel-inner h2 {
+        font-size: 23px;
+    }
+}
+@media (max-width: 400px){
+    .carousel-inner .item img {
+        height: 200px;
+    }
+    .carousel-inner h2 {
+        font-size: 17px;
+    }
+    .navbar-custom .navbar-brand {
+        font-size: 12px;
+    }
+}
 
 /* finally, footer */
 
