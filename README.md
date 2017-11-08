@@ -40,3 +40,7 @@ Hosted on <a href='https://codepen.io/WillMcIntosh/full/LzGzVx/' target='_blank'
   
 ### Company Website
   After commenting in the instructions, I paused the video and pulled up the finished file from the class files in a separate Chrome tab and did my best to mimic it using what I had learned in class. I would occasionally have to peek at the styling using Chrome developer tools to learn things like the background image styling using `background-attachment: fixed` and `background-size: cover`. When I had created the site, I watched the videos on fast forward and made some adjustments to the style so that it matched the example site perfectly. Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Company-Website/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
+
+### Course Website
+  A web page advertising this course created using HTML, CSS, and Bootstrap. The site features a custom navbar made using <a href= "http://twitterbootstrap3navbars.w3masters.nl" target= '_blank' rel='nofollow'>Twitter's Bootstrap 3 Navbar Generator</a>, the scrollspy feature of Bootstrap for different sections, and a carousel slider of images. For the background, I used a video provided in the class files set to autoplay, loop, and muted. The video is replaced by an image on smaller devices. 
+  Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Course-Website/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
