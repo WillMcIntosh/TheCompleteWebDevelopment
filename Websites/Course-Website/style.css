@@ -13,6 +13,8 @@ video#bgVideo {
     z-index: -100;
 }
 /* hide video and set pic for small devices (media queries) */
+
+/* can use max-device-width so video plays on computers even with small windows */
 @media (max-width: 768px){
     body{
         background: url(http://www.xsjjys.com/data/out/223/WHDQ-513589122.jpeg) center center fixed;
@@ -124,6 +126,14 @@ video#bgVideo {
 }
 
 /* finally, footer */
+
+.footer {
+    background-color: rgba(29, 167, 179, 0.1);
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 150px;
+    font-size: 15px;
+}
 
 /* custom navbar style created using http://twitterbootstrap3navbars.w3masters.nl/ */
 .navbar-custom {
