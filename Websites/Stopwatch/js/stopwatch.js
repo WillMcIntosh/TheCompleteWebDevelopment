@@ -54,7 +54,13 @@ $(function(){
         // increase both counters by one every 10ms
         action = setInterval(function(){
             timeCounter++;
+            if(timeCounter == 100*60*100){
+                timeCounter = 0;
+            }
             lapCounter++;
+            if(lapCounter == 100*60*100){
+                lapCounter = 0;
+            }
             updateTime();
         },10);
     }
@@ -68,9 +74,9 @@ $(function(){
         timeSeconds = Math.floor((timeCounter%6000)/100);
         timeCentiseconds =(timeCounter%6000)%100 ;
         //update display
-        $("#timeminute").text(timeMinutes);
-        $("#timesecond").text(timeSeconds);
-        $("#timecentisecond").text(timeCentiseconds);
+        $("#timeminute").text(format(timeMinutes));
+        $("#timesecond").text(format(timeSeconds));
+        $("#timecentisecond").text(format(timeCentiseconds));
 
 
         // same thing for lap times
@@ -78,9 +84,9 @@ $(function(){
         lapSeconds = Math.floor((lapCounter%6000)/100);
         lapCentiseconds =(lapCounter%6000)%100 ;
 
-        $("#lapminute").text(lapMinutes);
-        $("#lapsecond").text(lapSeconds);
-        $("#lapcentisecond").text(lapCentiseconds);
+        $("#lapminute").text(format(lapMinutes));
+        $("#lapsecond").text(format(lapSeconds));
+        $("#lapcentisecond").text(format(lapCentiseconds));
 
     }
         
@@ -88,6 +94,13 @@ $(function(){
         //1sec=100centiseconds
             
     //format numbers
+    function format(number){
+        if(number<10){
+            return '0'+number;
+        }else{
+            return number;
+        }
+    }
     
     //addLap function: print lap details inside the lap box
 });

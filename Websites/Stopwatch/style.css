@@ -4,7 +4,7 @@ html {
 /* html height so that image will take up full screen */
 body {
     color: #000;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Share Tech Mono', monospace;
     position: relative;
     min-height: 100%;
 }
