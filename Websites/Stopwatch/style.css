@@ -27,20 +27,20 @@ body:after {
 #header {
     text-align: center;
     /* vw is 1 percent of the viewport, so this will change bsaed on size */
-    font-size: 8vw;
+    font-size: 6vw;
 }
 
 /* lap */
 
 #lapTimer {
     text-align: right;
-    font-size: 4.5vw;
+    font-size: 3.5vw;
     
 }
 
 #timeTimer {
     text-align: center;
-    font-size: 10vw;
+    font-size: 8vw;
 }
 
 /* buttons */
@@ -70,4 +70,20 @@ body:after {
 #laps {
     max-height: 270px;
     overflow-y: scroll;
+}
+
+.lapInfo {
+    height: 50px;
+    border-bottom: 1px solid #DFD7C4;
+    margin: 15px;
+}
+
+.lapTitle {
+    font-size: 1.5em;
+    float: left;
+}
+
+.lapTime {
+    font-size: 2em;
+    float: right;
 }

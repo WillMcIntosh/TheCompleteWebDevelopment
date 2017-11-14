@@ -125,9 +125,9 @@ $(function(){
     function addLap(){
         lapNumber++;
         var myLapDetails =
-            '<div class="lap">'+
+            '<div class="lapInfo">'+
                 '<div class="lapTitle">'+
-                    'Lap' + lapNumber +
+                    'Lap ' + lapNumber +
                 '</div>'+
             '<div class="lapTime">'+
             '<span>'+ format(lapMinutes) + '</span>'+
