@@ -27,20 +27,20 @@ body:after {
 #header {
     text-align: center;
     /* vw is 1 percent of the viewport, so this will change bsaed on size */
-    font-size: 6vw;
+    font-size: 8vw;
 }
 
 /* lap */
 
 #lapTimer {
     text-align: right;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     
 }
 
 #timeTimer {
     text-align: center;
-    font-size: 8vw;
+    font-size: 10vw;
 }
 
 /* buttons */
@@ -52,13 +52,14 @@ body:after {
 .control {
     color: white;
     background-color: #d7A04e;
-    height: 10vw;
-    width: 10vw;
+    height: 12vw;
+    width: 12vw;
     text-align: center;
+    line-height: 6vw;
     padding: 20% 0;
     border-radius: 100%;
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 .control:active {

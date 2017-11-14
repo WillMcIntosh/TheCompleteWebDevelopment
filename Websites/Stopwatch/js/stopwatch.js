@@ -123,5 +123,7 @@ $(function(){
     
     //addLap function: print lap details inside the lap box
     function addLap(){
+        var myLapDetails = '<div>Lap</div>';
+        $(myLapDetails).appendTo("#laps");
     }
 });
