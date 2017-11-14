@@ -41,14 +41,25 @@ $(function(){
     });
     
     //click on resetButton
+    $("#resetButton").click(function(){
         //reload the page
+        location.reload();
+    });
     
     //click on lapButton
+    $("#lapButton").click(function(){
         //if mode is ON
+        if(mode){
             //stop action
+            clearInterval(action);
             //resetLap and print lap details
+            lapCounter = 0;
+            addLap();
             //start action
-    
+            startAction();
+        }
+    });
+
     //functions
     //hideshowButtons function shows two buttons
     function hideshowButtons(x,y){
@@ -111,4 +122,6 @@ $(function(){
     }
     
     //addLap function: print lap details inside the lap box
+    function addLap(){
+    }
 });
