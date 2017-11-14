@@ -135,6 +135,7 @@ $(function(){
             ':<span>'+ format(lapCentiseconds) + '</span>'+
                 '</div>'+
             '</div>';
-        $(myLapDetails).appendTo("#laps");
+        // $(myLapDetails).appendTo("#laps");
+        $(myLapDetails).prependTo("#laps");
     }
 });
