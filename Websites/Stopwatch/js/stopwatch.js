@@ -5,7 +5,7 @@ $(function(){
     var timeCounter = 0; //time counter
     var lapCounter = 0; //lap counter
     var action;//variable for setInterval
-    var lapNumber;//Number of Laps
+    var lapNumber = 0;//Number of Laps
         
         //minutes,seconds,centiseconds for time and lap
     var timeMinutes, timeSeconds, timeCentiseconds, lapMinutes, lapSeconds,
@@ -123,7 +123,18 @@ $(function(){
     
     //addLap function: print lap details inside the lap box
     function addLap(){
-        var myLapDetails = '<div>Lap</div>';
+        lapNumber++;
+        var myLapDetails =
+            '<div class="lap">'+
+                '<div class="lapTitle">'+
+                    'Lap' + lapNumber +
+                '</div>'+
+            '<div class="lapTime">'+
+            '<span>'+ format(lapMinutes) + '</span>'+
+            ':<span>'+ format(lapSeconds) + '</span>'+
+            ':<span>'+ format(lapCentiseconds) + '</span>'+
+                '</div>'+
+            '</div>';
         $(myLapDetails).appendTo("#laps");
     }
 });
