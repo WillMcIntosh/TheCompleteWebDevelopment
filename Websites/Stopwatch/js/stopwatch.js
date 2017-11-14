@@ -25,12 +25,20 @@ $(function(){
 
     
     //click on stopButton
+    $("#stopButton").click(function(){
         //show resume and reset buttons
+        hideshowButtons("#resumeButton", "#resetButton");
         //stop counter
+        clearInterval(action);
+    });
     
     //click on resumeButton
+    $("#resumeButton").click(function(){
         //show stop and lap buttons
+        hideshowButtons("#stopButton", "#lapButton");
         //start counter
+        startAction();
+    });
     
     //click on resetButton
         //reload the page
