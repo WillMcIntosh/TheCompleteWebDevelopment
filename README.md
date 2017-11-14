@@ -44,3 +44,7 @@ Hosted on <a href='https://codepen.io/WillMcIntosh/full/LzGzVx/' target='_blank'
 ### Course Website
   A web page advertising this course created using HTML, CSS, and Bootstrap. The site features a custom navbar made using <a href= "http://twitterbootstrap3navbars.w3masters.nl" target= '_blank' rel='nofollow'>Twitter's Bootstrap 3 Navbar Generator</a>, the scrollspy feature of Bootstrap for different sections, and a carousel slider of images. For the background, I used a video provided in the class files set to autoplay, loop, and muted. The video is replaced by an image on smaller devices. 
   Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Course-Website/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
+  
+### Stopwatch
+  Simple stopwatch with lap time feature created using HTML, CSS Bootstrap, and jQuery. After following along and making the app skeleton using HTML and Bootstrap, I watched the logic overview video and then paused the videos to try to implement the logic myself. I then went back through and watched the videos. I had trouble with stop and resume buttons but it turned out that I could just clear the interval and when I started the timer again it would pick up where it left off. I changed to a monotype font so that each character would be the same width and not shake the clock while it counted. 
+    Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Stopwatch/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
