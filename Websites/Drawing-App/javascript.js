@@ -53,7 +53,7 @@ $(function(){
         if(paint == true){
             if(paint_erase == "paint"){
                 // get color input
-                ctx.strokeStyle = 'red';
+                ctx.strokeStyle = $("#paintColor").val();
             }else{
                 // white color
                 ctx.strokeStyle = 'white';
@@ -84,7 +84,6 @@ $(function(){
     $("#save").click(function(){
         if(typeof(localStorage) != null){
             localStorage.setItem("imgCanvas", canvas.toDataURL());
-            window.alert(localStorage.getItem('imgCanvas'));
         }else{
             window.alert("Your browser does not support local storage." +
             "Results will not be saved.")
@@ -102,6 +101,20 @@ $(function(){
     });
     
     //change color input
+    $("#paintColor").change(function(){
+        $("#circle").css("background-color", $(this).val());
+    });
     
     //change lineWidth using slider
+    $("#slider").slider({
+        min: 3,
+        max: 30,
+        slide: function(event, ui){
+            $("#circle").height(ui.value);
+            $("#circle").width(ui.value);
+            ctx.lineWidth = ui.value;
+        }
+    });
+ 
+    
 });
