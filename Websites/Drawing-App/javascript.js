@@ -24,6 +24,13 @@ $(function(){
     var mouse = {x: 0, y: 0};
     
     //onload load saved work from localStorage
+    if(localStorage.getItem("imgCanvas") != null){
+        var img = new Image();
+        img.onload = function(){
+            ctx.drawImage(img, 0, 0);
+        }
+        img.src = localStorage.getItem("imgCanvas");
+    };
     
     //set drawing parameters (lineWidth, lineJoin, lineCap)
     ctx.lineWidth = 3;
@@ -74,6 +81,15 @@ $(function(){
     });
     
     //click on save button
+    $("#save").click(function(){
+        if(typeof(localStorage) != null){
+            localStorage.setItem("imgCanvas", canvas.toDataURL());
+            window.alert(localStorage.getItem('imgCanvas'));
+        }else{
+            window.alert("Your browser does not support local storage." +
+            "Results will not be saved.")
+        }
+    });
     
     //click on the erase button
     $("#erase").click(function(){
