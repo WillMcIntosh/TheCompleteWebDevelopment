@@ -50,5 +50,5 @@ Hosted on <a href='https://codepen.io/WillMcIntosh/full/LzGzVx/' target='_blank'
     Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Stopwatch/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
     
 ### Drawing App
-  Drawing App with the ability to change the thickness and colour of the lines drawn, as well as save drawings to local storage. Developed using HTML5 Canvas and jQuery. 
+  Drawing App with the ability to change the thickness and colour of the lines drawn, as well as save drawings to local storage. Developed using HTML5 Canvas and jQuery. After a brief intro to HTML Canvas, the logic of the app was laid out in a lecture. I had to follow along with the video this time as I was fairly unfamiliar with canvas. 
   Hosted on <a href='http://willmcintosh.thecompletewebhosting.com/Websites/Drawing-App/' target='_blank' rel='nofollow'>TheCompleteWebHosting</a> provided by the class.
