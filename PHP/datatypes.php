@@ -160,8 +160,20 @@ var_dump($nothingHere);
       <div>
 <?php
 ?>
-
       </div>
+      <h1>Resources</h1>
+      <div>
+<?php
+$myFile = fopen("sometext.txt", "r");
+var_dump($myFile);
+echo "<br>";
+echo fread($myFile, 20);
+// read whole file
+echo "<br>";
+echo fread($myFile, filesize("sometext.txt"));
+?>
+      </div>
+
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
   </script>
