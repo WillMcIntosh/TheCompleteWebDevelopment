@@ -38,47 +38,56 @@ $invalidEmail = '<p><strong>Please enter a valid email address!</strong></p>';
 $missingMessage = '<p><strong>Please enter a message!</strong></p>';
 // if user has submitted the form
 if($_POST["submit"]){
-    //check for errors
-    if(!$name){
-        $errors .= $missingName;  
-    }else{
-        $name = filter_var($name,FILTER_SANITIZE_STRING);   
+  // check for errors
+  if(!$name){
+    $errors .= $missingName;
+  }else{
+    $name = filter_var($name,FILTER_SANITIZE_STRING);
+  }
+  if(!$email){
+    $errors .= $missingEmail;
+  }else{
+    $email = filter_var($email,FILTER_SANITIZE_EMAIL);
+    if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+      $errors .= $invalidEmail;
     }
-    if(!$email){
-        $errors .= $missingEmail;   
-    }else{
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-            $errors .=$invalidEmail;   
-        }
-    }
-    if(!$message){
-        $errors .= $missingMessage;
-    }else{
-        $message = filter_var($message, FILTER_SANITIZE_STRING);   
-    }
- 
-        //if there are any errors
-    if($errors){
-        //print error message
-        $resultMessage = '<div class="alert alert-danger">' . $errors .'</div>';   
-    }else{
-        $to = "sam@hellodevelopers.890m.com";
-        $subject = "Contact";
-        $message = "
+  }
+  if(!$message){
+    $errors .= $missingMessage;
+  }else{
+    $message = filter_var($message,FILTER_SANITIZE_STRING);
+  }
+  // if errors
+  if($errors){
+    // print msg
+    $resultsMessage = '<div class="alert alert-danger">' . $errors .'</div>';
+  }else{
+      $to = "mcintoshwilliamh@gmail.com";
+      $subject = "Contact";
+      $emailMessage = "
         <p>Name: $name.</p>
         <p>Email: $email.</p>
         <p>Message:</p>
-        <p><strong>$message</strong></p>"; 
-        $headers = "Content-type: text/html";
-        if(mail($to, $subject, $message, $headers)){
-//            $resultMessage = '<div class="alert alert-success">Thanks for your message. We will get back to you as soon as possible!</div>';  
-            header("Location: 20.thanksforyourmessage.php");
-        }else{
-            $resultMessage = '<div class="alert alert-warning">Unable to send Email. Please try again later!</div>';  
-        }
-    }
-    echo $resultMessage;
+        <p><strong>$message</strong></p>";
+      $headers = "Content-type: text/html";
+      if(mail($to,$subject,$emailMessage, $headers)){
+        // $resultsMessage = '<div class="alert alert-success">Thank you, we will\
+        // get back to you as soon as possible!</div>'
+        header("Location:thanks.php");
+      }else{
+        $resultsMessage = '<div class="alert alert-warning">Unable to send email.\
+          Please try again later.</div>'
+      }
+  }
+        // no errors
+            // send the mail
+                // if success
+                    // print msg
+                // fail
+                    // print msg
+
+// print result message
+  echo $resultsMessage;
 }
 ?>
           <form action="contactform.php" method="post">
