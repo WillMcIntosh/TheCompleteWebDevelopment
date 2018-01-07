@@ -35,17 +35,89 @@
 //
 // echo "<p>Connected!</p>";
 ?>
+          <h3>Send data to DB:</h3>
+<?php
+// define all user inputs
+$id = $_POST["ID"];
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+// error messages
+$missingFirstname = "<p><strong>Please enter your firstname</strong></p>";
+$missingLastname = "<p><strong>Please enter your lastname</strong></p>";
+$missingEmail = "<p><strong>Please enter your email</strong></p>";
+$invalidEmail = "<p><strong>Please enter a valid email</strong></p>";
+$missingPassword = "<p><strong>Please enter a password</strong></p>";
+
+// check for errors
+if($_POST["submit"]) {
+  if(!$firstname) {
+    $errors .= $missingFirstname;
+  } else {
+    $firstname = filter_var($firstname, FILTER_SANITIZE_STRING);
+  }
+
+  if(!$lastname) {
+    $errors .= $missingLastname;
+  } else {
+    $lastname = filter_var($lastname, FILTER_SANITIZE_STRING);
+  }
+
+  if(!$email) {
+    $errors .= $missingEmail;
+  } else {
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $errors .= $invalidEmail;
+    }
+  }
+
+  if(!$password) {
+    $errors .= $missingPassword;
+  } 
+
+  if($errors) {
+    $resultsMessage = '<div class="alert alert-danger">' . $errors . '</div>';
+    echo $resultsMessage;
+  }
+}
+?>
           <form method="post">
             <div class="form-group">
-              <input id="ID" class="form-control" type="">
+              <label for="ID">ID:</label>
+              <input type="number" id="ID" placeholder="ID"
+              class="form-control" name="ID" maxlength="4">
             </div>
-          </form>  
+            <div class="form-group">
+              <label for="firstname">Firstname:</label>
+              <input type="text" id="firstname" placeholder="Firstname"
+              class="form-control" name="firstname"  maxlength="20">
+            </div>
+            <div class="form-group">
+              <label for="lastname">Lastname:</label>
+              <input type="text" id="lastname" placeholder="Lastname"
+              class="form-control" name="lastname"  maxlength="20">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="Email" 
+              class="form-control" name="email"  maxlength="30">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" placeholder="Password"
+              class="form-control" name="password"  maxlength="40">
+            </div>
+            <input type="submit" name="submit" class="btn btn-success 
+            btn-lg" value="Send data">
+          </div>
         </div>
       </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-    </script>
-    <script src="js/bootstrap.min.js">
-    </script>
-  </body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+      </script>
+      <script src="js/bootstrap.min.js">
+      </script>
+    </body>
 </html>
