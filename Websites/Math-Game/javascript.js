@@ -39,8 +39,8 @@ document.getElementById("startReset").onclick = function() {
         // set score to 0
         score = 0;
         document.getElementById("scoreValue").innerHTML = score;
-        document.getElementById("instruction").innerHTML = "Click on the correct
-        answer.";
+        document.getElementById("instruction").innerHTML = "Click on the \
+        correct answer.";
         // show countdown box
         var countLeft = 60;
         document.getElementById("timeRemainingValue").innerHTML = countLeft;
