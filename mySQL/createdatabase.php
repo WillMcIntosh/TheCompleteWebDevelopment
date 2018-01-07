@@ -23,31 +23,30 @@
       <div class="row">
         <div class="col-sm-offset-1 col-sm-10 containingDiv">
           <h1>Create Database:</h1>
+          <h3>Connect to server</h3>
 <?php
 // mysqli_connect ( host, username, pw, databasename )
-// $link = mysqli_connect("localhost", "willmcin_william", "#(?FF#Wvl5Ym", 
-//     "willmcin_users") or die("Error. Unable to connect: 
-//     " . mysqli_connect_error());
-//
-// var_dump($link); 
-//
+$link = mysqli_connect("localhost", "willmcin_william", "#(?FF#Wvl5Ym") 
+    or die("Error. Unable to connect: " . mysqli_connect_error());
+
+var_dump($link); 
+
 // check connection ( not needed because of or above )
 // if(mysqli_connect_error()) {
 //     die("Error. Unable to connect: " . mysqli_connect_error());
 // }
 
-// echo "<p>Connected!</p>";
-
-// Object Oriented way
-$link = new mysqli("localhost", "willmcin_william", "#(?FF#Wvl5Ym", 
-"willmcin_users");
-
-// check connection 
-if($link->connect_errno > 0) {
-    die("Unable to connect: " . $link->connect_error);
+echo "<p>Connected!</p>";
+?>
+          <h3>Create a database</h3>
+<?php
+// this doesn't work with cPanel and PHP myAdmin
+$sql = "CREATE DATABASE IF NOT EXISTS willmcin_store";
+if(mysqli_query($link, $sql)) {
+    echo "<p>Database store was created</p>";
+} else {
+    echo "ERROR" . mysqli_error($link);
 }
-
-echo "<p>Success!</p>"
 ?>
         </div>
       </div>
